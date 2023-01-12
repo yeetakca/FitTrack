@@ -1,6 +1,8 @@
 import 'excercise.dart';
+import 'package:uuid/uuid.dart';
 
 class WorkoutPlan {
+  String uuid = const Uuid().v1();
   String name;
   List<Exercise> exerciseList;
 
