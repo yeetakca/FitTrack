@@ -11,10 +11,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-List<WorkoutPlan> workoutPlanList = [];
+List<WorkoutPlan> workoutPlanList = [WorkoutPlan(name: "Test Plan")];
 
 class _HomePageState extends State<HomePage> {
-
   String welcomeText = "Welcome!";
   String? selectedWorkoutPlanId;
   WorkoutPlan? selectedWorkoutPlan;

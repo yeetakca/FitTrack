@@ -1,4 +1,4 @@
-import 'excercise.dart';
+import 'exercise.dart';
 import 'package:uuid/uuid.dart';
 
 class WorkoutPlan {
