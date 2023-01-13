@@ -6,7 +6,7 @@ class Exercise {
   int targetSet;
   int targetRep;
   int targetWeight;
-  List<Set> doneSets;
+  List<Set> doneSets=[];
 
   Exercise({
     required this.name,
@@ -14,7 +14,6 @@ class Exercise {
     required this.targetSet,
     required this.targetRep,
     required this.targetWeight,
-    this.doneSets = const [],
   });
 
   void addSet(int rep, int weight) {
