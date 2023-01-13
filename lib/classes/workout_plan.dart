@@ -4,11 +4,10 @@ import 'package:uuid/uuid.dart';
 class WorkoutPlan {
   String uuid = const Uuid().v1();
   String name;
-  List<Exercise> exerciseList;
+  List<Exercise> exerciseList = [];
 
   WorkoutPlan({
     required this.name,
-    this.exerciseList = const [],
   });
 
   void addExercise(String name, String videoLink, int targetSet, int targetRep, int targetWeight) {

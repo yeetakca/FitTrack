@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:fit_track/classes/workout_plan.dart';
+import 'package:fit_track/components/exercise_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   WorkoutPlan? selectedWorkoutPlan;
 
   TextEditingController addWorkoutTextController = TextEditingController();
+  TextEditingController changeWorkoutTextController = TextEditingController();
 
   @override
   void initState() {
@@ -27,21 +29,256 @@ class _HomePageState extends State<HomePage> {
     getWelcomeText().then((value) => setState(() {
           welcomeText = value;
         }));
+    workoutPlanList[0].addExercise("Barbell Bench Press", "?", 5, 5, 80);
+    workoutPlanList[0].addExercise("Barbell Bench 2", "?", 5, 5, 80);
+    workoutPlanList[0].addExercise("Barbell Bench 3", "?", 5, 5, 80);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "FitTrack",
-          style: GoogleFonts.montserrat(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.fitness_center),
+            const SizedBox(width: 5),
+            Text(
+              "FitTrack",
+              style: GoogleFonts.montserrat(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              ),
+            ),
+          ],
         ),
         backgroundColor: Colors.blue.shade900,
         centerTitle: true,
+        leading: TextButton(
+          onPressed: () {
+            // OPEN PROFILE PAGE
+          },
+          child: const Icon(
+            Icons.account_circle,
+            color: Colors.white,
+          ),
+        ),
+        actions: [
+          PopupMenuButton(
+            itemBuilder: (context) {
+              return {"Delete Plan", "Change Plan Name"}.map((item) {
+                return PopupMenuItem(
+                  value: item,
+                  child: Text(
+                    item,
+                    style: GoogleFonts.montserrat(
+                      color: item == "Delete Plan" ? Colors.red : Colors.white,
+                    ),
+                  ),
+                );
+              }).toList();
+            },
+            onSelected: (value) {
+              if (selectedWorkoutPlanId == null) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(
+                    "Please select a active workout plan.",
+                    style: GoogleFonts.montserrat(),
+                  ),
+                  action: SnackBarAction(
+                      label: 'OK!',
+                      onPressed: ScaffoldMessenger.of(context).clearSnackBars,
+                      textColor: Colors.blue.shade900),
+                ));
+                return;
+              }
+              switch (value) {
+                case "Delete Plan":
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        backgroundColor: Colors.grey.shade900,
+                        title: Padding(
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: Text(
+                            "Delete?",
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        content: Text(
+                          "Are you sure you want to delete selected workout plan and all of its information? (This process cannot be undone.)",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(
+                              "Cancel",
+                              style: GoogleFonts.montserrat(
+                                color: Colors.blue.shade900,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: TextButton(
+                              onPressed: () {
+                                setState(() {
+                                  workoutPlanList.removeWhere((element) =>
+                                      element.uuid == selectedWorkoutPlanId);
+                                  selectedWorkoutPlanId = null;
+                                  selectedWorkoutPlan = null;
+                                });
+                                Navigator.of(context).pop();
+                              },
+                              child: Text(
+                                "Delete",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.red,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                  break;
+                case "Change Plan Name":
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        changeWorkoutTextController.text =
+                            selectedWorkoutPlan!.name;
+                        bool isWorkoutNameChangeButtonEnabled = true;
+                        return StatefulBuilder(
+                          builder: (context, setState) {
+                            return AlertDialog(
+                              title: Padding(
+                                padding: const EdgeInsets.only(bottom: 16),
+                                child: Text(
+                                  "Change Workout Plan Name",
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              backgroundColor: Colors.grey.shade900,
+                              content: TextField(
+                                controller: changeWorkoutTextController,
+                                onChanged: (value) {
+                                  if (value.isEmpty) {
+                                    setState(() {
+                                      isWorkoutNameChangeButtonEnabled = false;
+                                    });
+                                  } else {
+                                    setState(() {
+                                      isWorkoutNameChangeButtonEnabled = true;
+                                    });
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  hintText: "Give a name",
+                                  filled: true,
+                                  fillColor: Colors.grey.shade800,
+                                  hintStyle: GoogleFonts.montserrat(
+                                    color: Colors.white54,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: const BorderSide(
+                                        color: Colors.white, width: 2),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.blue.shade900, width: 2),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                style:
+                                    GoogleFonts.montserrat(color: Colors.white),
+                              ),
+                              actions: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 16),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 16, vertical: 8),
+                                          decoration: BoxDecoration(
+                                            color: Colors.red.shade900,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Text(
+                                            "Cancel",
+                                            style: GoogleFonts.montserrat(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          if (changeWorkoutTextController
+                                              .text.isNotEmpty) {
+                                            selectedWorkoutPlan!.name =
+                                                changeWorkoutTextController
+                                                    .text;
+                                            Navigator.of(context).pop();
+                                            update();
+                                          }
+                                        },
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 16, vertical: 8),
+                                          decoration: BoxDecoration(
+                                            color:
+                                                isWorkoutNameChangeButtonEnabled
+                                                    ? Colors.blue.shade900
+                                                    : Colors.grey.shade800,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Text(
+                                            "Change",
+                                            style: GoogleFonts.montserrat(
+                                              color:
+                                                  isWorkoutNameChangeButtonEnabled
+                                                      ? Colors.white
+                                                      : Colors.grey,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      });
+                  break;
+              }
+            },
+            color: Colors.grey.shade900,
+          ),
+        ],
       ),
       backgroundColor: Colors.grey.shade900,
       body: Column(
@@ -205,19 +442,15 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                         TextButton(
                                           onPressed: () {
-                                            setState(() {
-                                              if (addWorkoutTextController
-                                                  .text.isNotEmpty) {
-                                                workoutPlanList.add(WorkoutPlan(
-                                                    name:
-                                                        addWorkoutTextController
-                                                            .text));
-                                                addWorkoutTextController
-                                                    .clear();
-                                                Navigator.of(context).pop();
-                                                update();
-                                              } else {}
-                                            });
+                                            if (addWorkoutTextController
+                                                .text.isNotEmpty) {
+                                              workoutPlanList.add(WorkoutPlan(
+                                                  name: addWorkoutTextController
+                                                      .text));
+                                              addWorkoutTextController.clear();
+                                              Navigator.of(context).pop();
+                                              update();
+                                            }
                                           },
                                           child: Container(
                                             padding: const EdgeInsets.symmetric(
@@ -258,43 +491,48 @@ class _HomePageState extends State<HomePage> {
               margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
               child: selectedWorkoutPlan == null
                   ? Column()
-                  : Column(
-                      mainAxisAlignment:
-                          selectedWorkoutPlan!.exerciseList.isEmpty
-                              ? MainAxisAlignment.center
-                              : MainAxisAlignment.start,
-                      children: selectedWorkoutPlan!.exerciseList.isEmpty
-                          ? [
-                              Text(
-                                "This workout program is empty.\nTry to add new exercises using plus sign on the bottom right.",
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.grey.shade500,
-                                ),
-                                textAlign: TextAlign.center,
-                              )
-                            ]
-                          : selectedWorkoutPlan!.exerciseList
-                              .map((exercise) => Container(
-                                    child: Text(exercise.name),
-                                  ))
-                              .toList(),
-                    ),
+                  : SingleChildScrollView(
+                    child: Column(
+                        children: selectedWorkoutPlan!.exerciseList.isEmpty
+                            ? [
+                                Text(
+                                  "This workout program is empty.\nTry to add new exercises using plus sign on the bottom right.",
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey.shade500,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )
+                              ]
+                            : selectedWorkoutPlan!.exerciseList
+                                .map((exercise) => ExerciseWidget(
+                                      exercise: exercise,
+                                      exerciseList: selectedWorkoutPlan!.exerciseList,
+                                      updateFunction: update,
+                                    ))
+                                .toList(),
+                      ),
+                  ),
             ),
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          // CREATE EXERCISE
+        },
         backgroundColor: Colors.blue.shade900,
+        elevation: 20,
         child: const Icon(Icons.add),
       ),
     );
   }
 
   void update() {
-    setState(() {});
+    setState(() {
+      //print("Updated");
+    });
   }
 
   Future<String> getWelcomeText() async {

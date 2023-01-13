@@ -1,6 +1,8 @@
 import 'set.dart';
+import 'package:uuid/uuid.dart';
 
 class Exercise {
+  String uuid = const Uuid().v1();
   String name;
   String videoLink;
   int targetSet;
