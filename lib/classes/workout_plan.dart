@@ -10,7 +10,12 @@ class WorkoutPlan {
     required this.name,
   });
 
-  void addExercise(String name, String videoLink, int targetSet, int targetRep, int targetWeight) {
-    exerciseList.add(Exercise(name: name, videoLink: videoLink, targetSet: targetSet, targetRep: targetRep, targetWeight: targetWeight));
+  void addExercise(
+      String name, int targetSet, int targetRep, double targetWeight) {
+    exerciseList.add(Exercise(
+        name: name,
+        targetSet: targetSet,
+        targetRep: targetRep,
+        targetWeight: targetWeight));
   }
 }

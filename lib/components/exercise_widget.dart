@@ -26,7 +26,10 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ExerciseScreen(exercise: widget.exercise,)),
+          MaterialPageRoute(
+              builder: (context) => ExerciseScreen(
+                    exercise: widget.exercise,
+                  )),
         );
       },
       child: Container(
@@ -108,7 +111,10 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                                     padding: const EdgeInsets.only(right: 8),
                                     child: TextButton(
                                       onPressed: () {
-                                        widget.exerciseList.removeWhere((element) => element.uuid == widget.exercise.uuid);
+                                        widget.exerciseList.removeWhere(
+                                            (element) =>
+                                                element.uuid ==
+                                                widget.exercise.uuid);
                                         widget.updateFunction();
                                         Navigator.of(context).pop();
                                       },
@@ -138,12 +144,14 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                   padding: const EdgeInsets.only(right: 8),
                   child: GestureDetector(
                     onTap: () {
-                      int index = widget.exerciseList.indexWhere((element) => element.uuid == widget.exercise.uuid);
+                      int index = widget.exerciseList.indexWhere(
+                          (element) => element.uuid == widget.exercise.uuid);
                       if (index == 0) {
                         return;
                       }
-                      Exercise temp = widget.exerciseList[index-1];
-                      widget.exerciseList[index-1] = widget.exerciseList[index];
+                      Exercise temp = widget.exerciseList[index - 1];
+                      widget.exerciseList[index - 1] =
+                          widget.exerciseList[index];
                       widget.exerciseList[index] = temp;
                       widget.updateFunction();
                     },
@@ -155,15 +163,16 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                 ),
                 GestureDetector(
                   onTap: () {
-                      int index = widget.exerciseList.indexWhere((element) => element.uuid == widget.exercise.uuid);
-                      if (index == widget.exerciseList.length-1) {
-                        return;
-                      }
-                      Exercise temp = widget.exerciseList[index+1];
-                      widget.exerciseList[index+1] = widget.exerciseList[index];
-                      widget.exerciseList[index] = temp;
-                      widget.updateFunction();
-                    },
+                    int index = widget.exerciseList.indexWhere(
+                        (element) => element.uuid == widget.exercise.uuid);
+                    if (index == widget.exerciseList.length - 1) {
+                      return;
+                    }
+                    Exercise temp = widget.exerciseList[index + 1];
+                    widget.exerciseList[index + 1] = widget.exerciseList[index];
+                    widget.exerciseList[index] = temp;
+                    widget.updateFunction();
+                  },
                   child: const Icon(
                     Icons.keyboard_arrow_down,
                     color: Colors.white,

@@ -17,14 +17,12 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
   @override
   void initState() {
     super.initState();
-    widget.exercise.videoLink=widget.exercise.name.toLowerCase().replaceAll(' ', '-');
     widget.exercise.addSet(15, 20);
     widget.exercise.addSet(16, 21);
   }
 
   @override
   Widget build(BuildContext context) {
-
     List<Widget> setWidgets = [];
     for (var i = 0; i < widget.exercise.doneSets.length - 1; i++) {
       if (i == 0) {
@@ -66,7 +64,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
         children: <Widget>[
           ExerciseVideo(
             videoPlayerController: VideoPlayerController.network(
-              'https://musclewiki.com/media/uploads/videos/branded/male-${widget.exercise.videoLink}-front.mp4#t=0.1',
+              'https://musclewiki.com/media/uploads/videos/branded/male-${widget.exercise.getLink()}-front.mp4#t=0.1',
             ),
             looping: true,
             autoplay: true,

@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-List<WorkoutPlan> workoutPlanList = [WorkoutPlan(name: "Test Plan")];
+List<WorkoutPlan> workoutPlanList = [WorkoutPlan(name: "Push Day")];
 
 class _HomePageState extends State<HomePage> {
   String welcomeText = "Welcome!";
@@ -29,9 +29,9 @@ class _HomePageState extends State<HomePage> {
     getWelcomeText().then((value) => setState(() {
           welcomeText = value;
         }));
-    workoutPlanList[0].addExercise("Barbell Bench Press", "?", 5, 5, 80);
-    workoutPlanList[0].addExercise("Barbell Bench 2", "?", 5, 5, 80);
-    workoutPlanList[0].addExercise("Barbell Bench 3", "?", 5, 5, 80);
+    workoutPlanList[0].addExercise("Barbell Bench Press", 5, 5, 80);
+    workoutPlanList[0].addExercise("Dumbbell Lateral Raise", 4, 12, 12.5);
+    workoutPlanList[0].addExercise("Dumbbell Skullcrusher", 4, 12, 25);
   }
 
   @override
@@ -492,7 +492,7 @@ class _HomePageState extends State<HomePage> {
               child: selectedWorkoutPlan == null
                   ? Column()
                   : SingleChildScrollView(
-                    child: Column(
+                      child: Column(
                         children: selectedWorkoutPlan!.exerciseList.isEmpty
                             ? [
                                 Text(
@@ -508,12 +508,13 @@ class _HomePageState extends State<HomePage> {
                             : selectedWorkoutPlan!.exerciseList
                                 .map((exercise) => ExerciseWidget(
                                       exercise: exercise,
-                                      exerciseList: selectedWorkoutPlan!.exerciseList,
+                                      exerciseList:
+                                          selectedWorkoutPlan!.exerciseList,
                                       updateFunction: update,
                                     ))
                                 .toList(),
                       ),
-                  ),
+                    ),
             ),
           ),
         ],
