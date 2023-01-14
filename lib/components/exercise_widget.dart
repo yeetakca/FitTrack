@@ -2,6 +2,7 @@ import 'package:fit_track/classes/exercise.dart';
 import 'package:fit_track/screens/exercise_screen.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
+import 'package:numberpicker/numberpicker.dart';
 
 class ExerciseWidget extends StatefulWidget {
   Exercise exercise;
@@ -42,12 +43,15 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              widget.exercise.name,
-              style: GoogleFonts.montserrat(
-                color: Colors.white,
-                letterSpacing: 2,
+            Flexible(
+              child: Text(
+                widget.exercise.name,
+                style: GoogleFonts.montserrat(
+                  color: Colors.white,
+                  letterSpacing: 2,
+                ),
               ),
             ),
             Row(
@@ -72,7 +76,213 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                     onSelected: (value) {
                       switch (value) {
                         case "Edit":
-                          // EDIT EXERCISE
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              int targetSetCount = widget.exercise.targetSet;
+                              int targetRepCount = widget.exercise.targetRep;
+                              int targetWeightCount1 = int.parse(widget.exercise.targetWeight.toString().split('.')[0]);
+                              int targetWeightCount2 = int.parse(widget.exercise.targetWeight.toString().split('.')[1]);
+                              bool addExerciseButtonEnabled = false;
+                              return StatefulBuilder(
+                                builder: (context, setState) {
+                                  return AlertDialog(
+                                    title: Padding(
+                                      padding: const EdgeInsets.only(bottom: 16),
+                                      child: Text(
+                                        "Add Exercise",
+                                        style: GoogleFonts.montserrat(
+                                          color: Colors.white,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.grey.shade900,
+                                    content: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Text(
+                                          "Set",
+                                          style: GoogleFonts.montserrat(
+                                            color: Colors.white
+                                          ),
+                                        ),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            const Icon(Icons.arrow_left, color: Colors.white38),
+                                            NumberPicker(
+                                              minValue: 1,
+                                              maxValue: 99,
+                                              value: targetSetCount,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  targetSetCount = value;
+                                                });
+                                              },
+                                              selectedTextStyle: GoogleFonts.montserrat(
+                                                color: Colors.blue.shade900,
+                                                fontSize: 32,
+                                              ),
+                                              itemCount: 1,
+                                              axis: Axis.horizontal,
+                                              itemWidth: 45,
+                                            ),
+                                            const Icon(Icons.arrow_right, color: Colors.white38),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 16),
+                                        Text(
+                                          "Rep x Weight",
+                                          style: GoogleFonts.montserrat(
+                                            color: Colors.white
+                                          ),
+                                        ),
+                                        const SizedBox(height: 8),
+                                        const Icon(Icons.arrow_drop_up, color: Colors.white38),
+                                        const Divider(
+                                          thickness: 1,
+                                          color: Colors.white38,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            NumberPicker(
+                                              minValue: 1,
+                                              maxValue: 99,
+                                              value: targetRepCount,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  targetRepCount = value;
+                                                });
+                                              },
+                                              selectedTextStyle: GoogleFonts.montserrat(
+                                                color: Colors.blue.shade900,
+                                                fontSize: 32,
+                                              ),
+                                              itemCount: 1,
+                                              itemWidth: 65,
+                                            ),
+                                            const Icon(
+                                              Icons.close,
+                                              color: Colors.white,
+                                            ),
+                                            NumberPicker(
+                                              minValue: 0,
+                                              maxValue: 500,
+                                              value: targetWeightCount1,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  targetWeightCount1 = value;
+                                                });
+                                              },
+                                              selectedTextStyle: GoogleFonts.montserrat(
+                                                color: Colors.blue.shade900,
+                                                fontSize: 32,
+                                              ),
+                                              itemCount: 1,
+                                              itemWidth: 65,
+                                            ),
+                                            Text(
+                                              ",",
+                                              style: GoogleFonts.montserrat(
+                                                color: Colors.white,
+                                                fontSize: 32,
+                                              ),
+                                            ),
+                                            NumberPicker(
+                                              minValue: 0,
+                                              maxValue: 99,
+                                              step: 25,
+                                              infiniteLoop: true,
+                                              zeroPad: true,
+                                              value: targetWeightCount2 == 5 ? 50 : targetWeightCount2,
+                                              onChanged: (value) {
+                                                setState(() {
+                                                  targetWeightCount2 = value;
+                                                });
+                                              },
+                                              selectedTextStyle: GoogleFonts.montserrat(
+                                                color: Colors.blue.shade900,
+                                                fontSize: 32,
+                                              ),
+                                              itemCount: 1,
+                                              itemWidth: 65,
+                                            ),
+                                            Text(
+                                              "KG",
+                                              style: GoogleFonts.montserrat(
+                                                color: Colors.white38,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        const Divider(
+                                          thickness: 1,
+                                          color: Colors.white38,
+                                        ),
+                                        const Icon(Icons.arrow_drop_down, color: Colors.white38),
+                                      ],
+                                    ),
+                                    actions: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(bottom: 16),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: Container(
+                                                padding: const EdgeInsets.symmetric(
+                                                    horizontal: 16, vertical: 8),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.red.shade900,
+                                                  borderRadius:
+                                                      BorderRadius.circular(8),
+                                                ),
+                                                child: Text(
+                                                  "Cancel",
+                                                  style: GoogleFonts.montserrat(
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            TextButton(
+                                              onPressed: () {
+                                                widget.exercise.targetSet = targetSetCount;
+                                                widget.exercise.targetRep = targetRepCount;
+                                                widget.exercise.targetWeight = double.parse("$targetWeightCount1.$targetWeightCount2");
+                                                widget.updateFunction();
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: Container(
+                                                padding: const EdgeInsets.symmetric(
+                                                    horizontal: 16, vertical: 8),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.blue.shade900,
+                                                  borderRadius:
+                                                      BorderRadius.circular(8),
+                                                ),
+                                                child: Text(
+                                                  "Save",
+                                                  style: GoogleFonts.montserrat(
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            });
                           break;
                         case "Delete":
                           showDialog(

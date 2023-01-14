@@ -18,6 +18,12 @@ class HomePage extends StatefulWidget {
 
 List<WorkoutPlan> workoutPlanList = [];
 
+Map<String, List<String>> excel = {
+  'Chest': ['Barbell Bench Press', 'Dumbbell Incline Bench Press'],
+  'Shoulder': ['Dumbbell Lateral Raise', 'Dumbbell Seated Overhead Press'],
+  'Triceps': ['Dumbbell Skullcrusher', 'Dips'],
+};
+
 class _HomePageState extends State<HomePage> {
   String welcomeText = "Welcome!";
   String? selectedWorkoutPlanId;
@@ -529,6 +535,19 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          if (selectedWorkoutPlan == null) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text(
+                "Please select a active workout plan.",
+                style: GoogleFonts.montserrat(),
+              ),
+              action: SnackBarAction(
+                  label: 'OK!',
+                  onPressed: ScaffoldMessenger.of(context).clearSnackBars,
+                  textColor: Colors.blue.shade900),
+            ));
+            return;
+          }
           showDialog(
             context: context,
             builder: (context) {
@@ -558,22 +577,15 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         DropdownButton(
                           value: selectedBodyPart,
-                          items: [
-                            DropdownMenuItem(
-                              value: "Chest",
+                          items: excel.keys.map((key) {
+                            return DropdownMenuItem(
+                              value: key,
                               child: Text(
-                                "Chest",
+                                key,
                                 style: GoogleFonts.montserrat(),
                                 ),
-                            ),
-                            DropdownMenuItem(
-                              value: "Back",
-                              child: Text(
-                                "Back",
-                                style: GoogleFonts.montserrat(),
-                                ),
-                            ),
-                          ],
+                            );
+                          }).toList(),
                           hint: Text(
                             "Select a Body Part",
                             textAlign: TextAlign.center,
@@ -598,22 +610,15 @@ class _HomePageState extends State<HomePage> {
                         ),
                         DropdownButton(
                           value: selectedExerciseName,
-                          items: [
-                            DropdownMenuItem(
-                              value: "Barbell Bench Press",
+                          items: selectedBodyPart == null ? null : excel[selectedBodyPart]!.map((key) {
+                            return DropdownMenuItem(
+                              value: key,
                               child: Text(
-                                "Barbell Bench Press",
+                                key,
                                 style: GoogleFonts.montserrat(),
                                 ),
-                            ),
-                            DropdownMenuItem(
-                              value: "Shoulder Dumbell Press",
-                              child: Text(
-                                "Shoulder Dumbell Press",
-                                style: GoogleFonts.montserrat(),
-                                ),
-                            ),
-                          ],
+                            );
+                          }).toList(),
                           hint: Text(
                             "Select a Exercise",
                             textAlign: TextAlign.center,
@@ -632,6 +637,7 @@ class _HomePageState extends State<HomePage> {
                           isExpanded: true,
                           iconSize: 32,
                           iconEnabledColor: Colors.grey.shade500,
+                          iconDisabledColor: Colors.red,
                           dropdownColor: Colors.grey.shade800,
                           style: GoogleFonts.montserrat(
                             color: Colors.white,
@@ -790,7 +796,8 @@ class _HomePageState extends State<HomePage> {
                             ),
                             TextButton(
                               onPressed: () {
-                                // ADD EXERCISE
+                                selectedWorkoutPlan!.addExercise(selectedExerciseName!, targetSetCount, targetRepCount, double.parse("$targetWeightCount1.$targetWeightCount2"));
+                                saveWorkoutPlanList();
                                 Navigator.of(context).pop();
                                 update();
                               },
