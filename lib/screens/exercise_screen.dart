@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:fit_track/classes/exercise.dart';
 import 'package:fit_track/components/exercise_video.dart';
 import 'package:fit_track/components/set_widget.dart';
@@ -7,8 +9,9 @@ import 'package:video_player/video_player.dart';
 
 class ExerciseScreen extends StatefulWidget {
   Exercise exercise;
+  Function saveWorkoutPlanList;
 
-  ExerciseScreen({Key? key, required this.exercise}) : super(key: key);
+  ExerciseScreen({Key? key, required this.exercise, required this.saveWorkoutPlanList}) : super(key: key);
 
   @override
   State<ExerciseScreen> createState() => _ExerciseScreenState();
@@ -197,6 +200,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
   }
 
   void update() {
+    widget.saveWorkoutPlanList();
     setState(
       () {
         //print("Updated");

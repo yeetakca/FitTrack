@@ -30,6 +30,7 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
           MaterialPageRoute(
               builder: (context) => ExerciseScreen(
                     exercise: widget.exercise,
+                    saveWorkoutPlanList: widget.updateFunction,
                   )),
         );
       },

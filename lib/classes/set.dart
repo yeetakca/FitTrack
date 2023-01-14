@@ -13,12 +13,14 @@ class Set {
   });
 
   Set.fromJson(Map<String, dynamic> json)
-    : date = DateTime.fromMillisecondsSinceEpoch(json['date']),
+    : uuid = json['uuid'],
+    date = DateTime.fromMillisecondsSinceEpoch(json['date']),
     rep = json['rep'],
     weight = json['weight'];
 
   Map<String, dynamic> toJson() {
     return {
+      'uuid': uuid,
       'date': date.millisecondsSinceEpoch,
       'rep': rep,
       'weight': weight,

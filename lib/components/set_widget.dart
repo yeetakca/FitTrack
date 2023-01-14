@@ -42,7 +42,10 @@ class _SetWidgetState extends State<SetWidget> {
             step: 1,
             haptics: true,
             itemCount: 1,
-            onChanged: (value) => setState(() => widget.doneSet.rep = value),
+            onChanged: (value) => setState(() {
+              widget.doneSet.rep = value;
+              widget.updateFunction();
+            }),
           ),
           const Icon(
             Icons.close,
@@ -67,6 +70,7 @@ class _SetWidgetState extends State<SetWidget> {
                     setState(() {
                       val1 = value;
                       widget.doneSet.weight = double.parse('$val1.$val2');
+                      widget.updateFunction();
                     });
                   }),
               const Text(
@@ -89,6 +93,7 @@ class _SetWidgetState extends State<SetWidget> {
                     setState(() {
                       val2 = value;
                       widget.doneSet.weight = double.parse('$val1.$val2');
+                      widget.updateFunction();
                     });
                   }),
             ],
