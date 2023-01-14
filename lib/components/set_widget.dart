@@ -3,7 +3,7 @@ import 'package:numberpicker/numberpicker.dart';
 
 class SetWidget extends StatefulWidget {
   int rep;
-  int weight;
+  double weight;
 
   SetWidget({Key? key, required this.rep, required this.weight})
       : super(key: key);
@@ -60,13 +60,13 @@ class _SetWidgetState extends State<SetWidget> {
                     selectedTextStyle:
                         TextStyle(color: Colors.blue.shade700, fontSize: 25),
                     itemWidth: 30,
-                    value: widget.weight,
+                    value: widget.weight.floor(), // ------------
                     minValue: 0,
                     maxValue: 500,
                     step: 1,
                     haptics: true,
                     itemCount: 1,
-                    onChanged: (value) => setState(() => widget.weight = value),
+                    onChanged: (value) => setState(() => widget.weight = value as double), // -----------
                   ),
                 ],
               ),
@@ -84,13 +84,13 @@ class _SetWidgetState extends State<SetWidget> {
                     selectedTextStyle:
                         TextStyle(color: Colors.blue.shade700, fontSize: 25),
                     itemWidth: 35,
-                    value: widget.weight,
+                    value: widget.weight.floor(), // -----------
                     minValue: 0,
                     maxValue: 75,
                     step: 25,
                     haptics: true,
                     itemCount: 1,
-                    onChanged: (value) => setState(() => widget.weight = value),
+                    onChanged: (value) => setState(() => widget.weight = value as double), // ---------------
                   ),
                 ],
               ),

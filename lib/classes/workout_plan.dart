@@ -10,6 +10,21 @@ class WorkoutPlan {
     required this.name,
   });
 
+  WorkoutPlan.fromJson(Map<String, dynamic> json)
+    : uuid = json['uuid'],
+    name = json['name'],
+    exerciseList = json['exerciseList'].map((element) {
+      return Exercise.fromJson(element);
+    }).toList().cast<Exercise>();
+
+  Map<String, dynamic> toJson() {
+    return {
+      'uuid': uuid,
+      'name': name,
+      'exerciseList': exerciseList,
+    };
+  }
+
   void addExercise(
       String name, int targetSet, int targetRep, double targetWeight) {
     exerciseList.add(Exercise(
