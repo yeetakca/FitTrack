@@ -20,7 +20,7 @@ class Exercise {
     return name.toLowerCase().replaceAll(" ", "-");
   }
 
-  void addSet(int rep, int weight) {
+  void addSet(int rep, double weight) {
     doneSets.add(Set(date: DateTime.now(), rep: rep, weight: weight));
   }
 }

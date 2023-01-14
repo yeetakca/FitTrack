@@ -1,7 +1,10 @@
+import 'package:uuid/uuid.dart';
+
 class Set {
+  String uuid = const Uuid().v1();
   DateTime date;
   int rep;
-  int weight;
+  double weight;
 
   Set({
     required this.date,
