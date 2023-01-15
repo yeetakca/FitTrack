@@ -4,6 +4,7 @@ import 'dart:developer' as dev;
 
 import 'package:fit_track/classes/workout_plan.dart';
 import 'package:fit_track/components/exercise_widget.dart';
+import 'package:fit_track/screens/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:numberpicker/numberpicker.dart';
@@ -16,15 +17,14 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-List<WorkoutPlan> workoutPlanList = [];
-
-Map<String, List<String>> excel = {
-  'Chest': ['Barbell Bench Press', 'Dumbbell Incline Bench Press'],
-  'Shoulder': ['Dumbbell Lateral Raise', 'Dumbbell Seated Overhead Press'],
-  'Triceps': ['Dumbbell Skullcrusher', 'Dips'],
-};
-
 class _HomePageState extends State<HomePage> {
+  List<WorkoutPlan> workoutPlanList = [];
+  Map<String, List<String>> excel = {
+    'Chest': ['Barbell Bench Press', 'Dumbbell Incline Bench Press'],
+    'Shoulder': ['Dumbbell Lateral Raise', 'Dumbbell Seated Overhead Press'],
+    'Triceps': ['Dumbbell Skullcrusher', 'Dips'],
+  };
+  
   String welcomeText = "Welcome!";
   String? selectedWorkoutPlanId;
   WorkoutPlan? selectedWorkoutPlan;
@@ -65,8 +65,11 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         leading: TextButton(
           onPressed: () {
-            // OPEN PROFILE PAGE
-            //dev.log();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ProfilePage()),
+            );
           },
           child: const Icon(
             Icons.account_circle,
@@ -729,7 +732,7 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               ",",
                               style: GoogleFonts.montserrat(
-                                color: Colors.white,
+                                color: Colors.white38,
                                 fontSize: 32,
                               ),
                             ),
