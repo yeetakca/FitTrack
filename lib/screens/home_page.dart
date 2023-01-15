@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           PopupMenuButton(
             itemBuilder: (context) {
-              return {"Delete Plan", "Change Plan Name"}.map((item) {
+              return {"Change Plan Name", "Delete Plan"}.map((item) {
                 return PopupMenuItem(
                   value: item,
                   child: Text(
@@ -112,13 +112,13 @@ class _HomePageState extends State<HomePage> {
                     builder: (context) {
                       return AlertDialog(
                         backgroundColor: Colors.grey.shade900,
-                        title: Padding(
-                          padding: const EdgeInsets.only(bottom: 16),
-                          child: Text(
-                            "Delete?",
-                            style: GoogleFonts.montserrat(
-                              color: Colors.white,
-                            ),
+                        titlePadding: const EdgeInsets.all(24),
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                        actionsPadding: const EdgeInsets.all(8),
+                        title: Text(
+                          "Delete?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
                           ),
                         ),
                         content: Text(
@@ -175,17 +175,17 @@ class _HomePageState extends State<HomePage> {
                         return StatefulBuilder(
                           builder: (context, setState) {
                             return AlertDialog(
-                              title: Padding(
-                                padding: const EdgeInsets.only(bottom: 16),
-                                child: Text(
-                                  "Change Workout Plan Name",
-                                  style: GoogleFonts.montserrat(
-                                    color: Colors.white,
-                                  ),
-                                  textAlign: TextAlign.center,
+                              title: Text(
+                                "Change Workout Plan Name",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white,
                                 ),
+                                textAlign: TextAlign.center,
                               ),
                               backgroundColor: Colors.grey.shade900,
+                              titlePadding: const EdgeInsets.all(24),
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                              actionsPadding: const EdgeInsets.all(24),
                               content: TextField(
                                 controller: changeWorkoutTextController,
                                 onChanged: (value) {
@@ -201,19 +201,20 @@ class _HomePageState extends State<HomePage> {
                                 },
                                 decoration: InputDecoration(
                                   hintText: "Give a name",
-                                  filled: true,
-                                  fillColor: Colors.grey.shade800,
                                   hintStyle: GoogleFonts.montserrat(
-                                    color: Colors.white54,
+                                    color: Colors.white38,
                                   ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                        color: Colors.white, width: 2),
-                                    borderRadius: BorderRadius.circular(16),
+                                  enabledBorder: const OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Colors.white,
+                                      width: 1,
+                                    ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                        color: Colors.blue.shade900, width: 2),
+                                      color: Colors.blue.shade900,
+                                      width: 1,
+                                    ),
                                     borderRadius: BorderRadius.circular(16),
                                   ),
                                 ),
@@ -221,67 +222,64 @@ class _HomePageState extends State<HomePage> {
                                     GoogleFonts.montserrat(color: Colors.white),
                               ),
                               actions: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 16),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextButton(
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 16, vertical: 8),
-                                          decoration: BoxDecoration(
-                                            color: Colors.red.shade900,
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                          child: Text(
-                                            "Cancel",
-                                            style: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                            ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 16, vertical: 8),
+                                        decoration: BoxDecoration(
+                                          color: Colors.red.shade900,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Text(
+                                          "Cancel",
+                                          style: GoogleFonts.montserrat(
+                                            color: Colors.white,
                                           ),
                                         ),
                                       ),
-                                      TextButton(
-                                        onPressed: () {
-                                          if (changeWorkoutTextController
-                                              .text.isNotEmpty) {
-                                            selectedWorkoutPlan!.name =
-                                                changeWorkoutTextController
-                                                    .text;
-                                            Navigator.of(context).pop();
-                                            saveWorkoutPlanList();
-                                            update();
-                                          }
-                                        },
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 16, vertical: 8),
-                                          decoration: BoxDecoration(
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        if (changeWorkoutTextController
+                                            .text.isNotEmpty) {
+                                          selectedWorkoutPlan!.name =
+                                              changeWorkoutTextController
+                                                  .text;
+                                          Navigator.of(context).pop();
+                                          saveWorkoutPlanList();
+                                          update();
+                                        }
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 16, vertical: 8),
+                                        decoration: BoxDecoration(
+                                          color:
+                                              isWorkoutNameChangeButtonEnabled
+                                                  ? Colors.blue.shade900
+                                                  : Colors.grey.shade800,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Text(
+                                          "Change",
+                                          style: GoogleFonts.montserrat(
                                             color:
                                                 isWorkoutNameChangeButtonEnabled
-                                                    ? Colors.blue.shade900
-                                                    : Colors.grey.shade800,
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                          child: Text(
-                                            "Change",
-                                            style: GoogleFonts.montserrat(
-                                              color:
-                                                  isWorkoutNameChangeButtonEnabled
-                                                      ? Colors.white
-                                                      : Colors.grey,
-                                            ),
+                                                    ? Colors.white
+                                                    : Colors.grey,
                                           ),
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             );
@@ -382,17 +380,17 @@ class _HomePageState extends State<HomePage> {
                           return StatefulBuilder(
                             builder: (context, setState) {
                               return AlertDialog(
-                                title: Padding(
-                                  padding: const EdgeInsets.only(bottom: 16),
-                                  child: Text(
-                                    "Add Workout Plan",
-                                    style: GoogleFonts.montserrat(
-                                      color: Colors.white,
-                                    ),
-                                    textAlign: TextAlign.center,
+                                title: Text(
+                                  "Add Workout Plan",
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
                                   ),
+                                  textAlign: TextAlign.center,
                                 ),
                                 backgroundColor: Colors.grey.shade900,
+                                titlePadding: const EdgeInsets.all(24),
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                                actionsPadding: const EdgeInsets.all(24),
                                 content: TextField(
                                   controller: addWorkoutTextController,
                                   onChanged: (value) {
@@ -408,20 +406,20 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   decoration: InputDecoration(
                                     hintText: "Give a name",
-                                    filled: true,
-                                    fillColor: Colors.grey.shade800,
                                     hintStyle: GoogleFonts.montserrat(
-                                      color: Colors.white54,
+                                      color: Colors.white38,
                                     ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
-                                          color: Colors.white, width: 2),
-                                      borderRadius: BorderRadius.circular(16),
+                                    enabledBorder: const OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                        width: 1,
+                                      ),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                          color: Colors.blue.shade900,
-                                          width: 2),
+                                        color: Colors.blue.shade900,
+                                        width: 1,
+                                      ),
                                       borderRadius: BorderRadius.circular(16),
                                     ),
                                   ),
@@ -429,68 +427,65 @@ class _HomePageState extends State<HomePage> {
                                       color: Colors.white),
                                 ),
                                 actions: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 16),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        TextButton(
-                                          onPressed: () {
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      TextButton(
+                                        onPressed: () {
+                                          addWorkoutTextController.clear();
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 16, vertical: 8),
+                                          decoration: BoxDecoration(
+                                            color: Colors.red.shade900,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Text(
+                                            "Cancel",
+                                            style: GoogleFonts.montserrat(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          if (addWorkoutTextController
+                                              .text.isNotEmpty) {
+                                            workoutPlanList.add(WorkoutPlan(
+                                                name: addWorkoutTextController
+                                                    .text));
                                             addWorkoutTextController.clear();
                                             Navigator.of(context).pop();
-                                          },
-                                          child: Container(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 16, vertical: 8),
-                                            decoration: BoxDecoration(
-                                              color: Colors.red.shade900,
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            child: Text(
-                                              "Cancel",
-                                              style: GoogleFonts.montserrat(
-                                                color: Colors.white,
-                                              ),
-                                            ),
+                                            saveWorkoutPlanList();
+                                            update();
+                                          }
+                                        },
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 16, vertical: 8),
+                                          decoration: BoxDecoration(
+                                            color: isWorkoutAddButtonEnabled
+                                                ? Colors.blue.shade900
+                                                : Colors.grey.shade800,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
                                           ),
-                                        ),
-                                        TextButton(
-                                          onPressed: () {
-                                            if (addWorkoutTextController
-                                                .text.isNotEmpty) {
-                                              workoutPlanList.add(WorkoutPlan(
-                                                  name: addWorkoutTextController
-                                                      .text));
-                                              addWorkoutTextController.clear();
-                                              Navigator.of(context).pop();
-                                              saveWorkoutPlanList();
-                                              update();
-                                            }
-                                          },
-                                          child: Container(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 16, vertical: 8),
-                                            decoration: BoxDecoration(
+                                          child: Text(
+                                            "Add",
+                                            style: GoogleFonts.montserrat(
                                               color: isWorkoutAddButtonEnabled
-                                                  ? Colors.blue.shade900
-                                                  : Colors.grey.shade800,
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            child: Text(
-                                              "Add",
-                                              style: GoogleFonts.montserrat(
-                                                color: isWorkoutAddButtonEnabled
-                                                    ? Colors.white
-                                                    : Colors.grey,
-                                              ),
+                                                  ? Colors.white
+                                                  : Colors.grey,
                                             ),
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               );
@@ -564,17 +559,17 @@ class _HomePageState extends State<HomePage> {
               return StatefulBuilder(
                 builder: (context, setState) {
                   return AlertDialog(
-                    title: Padding(
-                      padding: const EdgeInsets.only(bottom: 16),
-                      child: Text(
-                        "Add Exercise",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
-                        ),
-                        textAlign: TextAlign.center,
+                    title: Text(
+                      "Add Exercise",
+                      style: GoogleFonts.montserrat(
+                        color: Colors.white,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                     backgroundColor: Colors.grey.shade900,
+                    titlePadding: const EdgeInsets.all(24),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                    actionsPadding: const EdgeInsets.all(24),
                     content: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -711,7 +706,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             const Icon(
                               Icons.close,
-                              color: Colors.white,
+                              color: Colors.white38,
                             ),
                             NumberPicker(
                               minValue: 0,
@@ -771,61 +766,58 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     actions: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 16),
-                        child: Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 8),
-                                decoration: BoxDecoration(
-                                  color: Colors.red.shade900,
-                                  borderRadius:
-                                      BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  "Cancel",
-                                  style: GoogleFonts.montserrat(
-                                    color: Colors.white,
-                                  ),
+                      Row(
+                        mainAxisAlignment:
+                            MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              decoration: BoxDecoration(
+                                color: Colors.red.shade900,
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                "Cancel",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                selectedWorkoutPlan!.addExercise(selectedExerciseName!, targetSetCount, targetRepCount, double.parse("$targetWeightCount1.$targetWeightCount2"));
-                                saveWorkoutPlanList();
-                                Navigator.of(context).pop();
-                                update();
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 8),
-                                decoration: BoxDecoration(
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              selectedWorkoutPlan!.addExercise(selectedExerciseName!, targetSetCount, targetRepCount, double.parse("$targetWeightCount1.$targetWeightCount2"));
+                              saveWorkoutPlanList();
+                              Navigator.of(context).pop();
+                              update();
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              decoration: BoxDecoration(
+                                color: addExerciseButtonEnabled
+                                  ? Colors.blue.shade900
+                                  : Colors.grey.shade800,
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                "Add",
+                                style: GoogleFonts.montserrat(
                                   color: addExerciseButtonEnabled
-                                    ? Colors.blue.shade900
-                                    : Colors.grey.shade800,
-                                  borderRadius:
-                                      BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  "Add",
-                                  style: GoogleFonts.montserrat(
-                                    color: addExerciseButtonEnabled
-                                      ? Colors.white
-                                      : Colors.grey,
-                                  ),
+                                    ? Colors.white
+                                    : Colors.grey,
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   );

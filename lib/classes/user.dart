@@ -3,7 +3,7 @@ import 'dart:convert';
 class User {
   String name;
   List weightHistory = [];
-  double height;
+  int height;
   int age;
   String gender;
 

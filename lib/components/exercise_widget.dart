@@ -84,21 +84,20 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                               int targetRepCount = widget.exercise.targetRep;
                               int targetWeightCount1 = int.parse(widget.exercise.targetWeight.toString().split('.')[0]);
                               int targetWeightCount2 = int.parse(widget.exercise.targetWeight.toString().split('.')[1]);
-                              bool addExerciseButtonEnabled = false;
                               return StatefulBuilder(
                                 builder: (context, setState) {
                                   return AlertDialog(
-                                    title: Padding(
-                                      padding: const EdgeInsets.only(bottom: 16),
-                                      child: Text(
-                                        "Add Exercise",
-                                        style: GoogleFonts.montserrat(
-                                          color: Colors.white,
-                                        ),
-                                        textAlign: TextAlign.center,
+                                    title: Text(
+                                      "Add Exercise",
+                                      style: GoogleFonts.montserrat(
+                                        color: Colors.white,
                                       ),
+                                      textAlign: TextAlign.center,
                                     ),
                                     backgroundColor: Colors.grey.shade900,
+                                    titlePadding: const EdgeInsets.all(24),
+                                    contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                                    actionsPadding: const EdgeInsets.all(24),
                                     content: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
@@ -166,7 +165,7 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                                             ),
                                             const Icon(
                                               Icons.close,
-                                              color: Colors.white,
+                                              color: Colors.white38,
                                             ),
                                             NumberPicker(
                                               minValue: 0,
@@ -187,7 +186,7 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                                             Text(
                                               ",",
                                               style: GoogleFonts.montserrat(
-                                                color: Colors.white,
+                                                color: Colors.white38,
                                                 fontSize: 32,
                                               ),
                                             ),
@@ -226,58 +225,55 @@ class _ExerciseWidgetState extends State<ExerciseWidget> {
                                       ],
                                     ),
                                     actions: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(bottom: 16),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            TextButton(
-                                              onPressed: () {
-                                                Navigator.of(context).pop();
-                                              },
-                                              child: Container(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 16, vertical: 8),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.red.shade900,
-                                                  borderRadius:
-                                                      BorderRadius.circular(8),
-                                                ),
-                                                child: Text(
-                                                  "Cancel",
-                                                  style: GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                  ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.symmetric(
+                                                  horizontal: 16, vertical: 8),
+                                              decoration: BoxDecoration(
+                                                color: Colors.red.shade900,
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              child: Text(
+                                                "Cancel",
+                                                style: GoogleFonts.montserrat(
+                                                  color: Colors.white,
                                                 ),
                                               ),
                                             ),
-                                            TextButton(
-                                              onPressed: () {
-                                                widget.exercise.targetSet = targetSetCount;
-                                                widget.exercise.targetRep = targetRepCount;
-                                                widget.exercise.targetWeight = double.parse("$targetWeightCount1.$targetWeightCount2");
-                                                widget.updateFunction();
-                                                Navigator.of(context).pop();
-                                              },
-                                              child: Container(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 16, vertical: 8),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.blue.shade900,
-                                                  borderRadius:
-                                                      BorderRadius.circular(8),
-                                                ),
-                                                child: Text(
-                                                  "Save",
-                                                  style: GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                  ),
+                                          ),
+                                          TextButton(
+                                            onPressed: () {
+                                              widget.exercise.targetSet = targetSetCount;
+                                              widget.exercise.targetRep = targetRepCount;
+                                              widget.exercise.targetWeight = double.parse("$targetWeightCount1.$targetWeightCount2");
+                                              widget.updateFunction();
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.symmetric(
+                                                  horizontal: 16, vertical: 8),
+                                              decoration: BoxDecoration(
+                                                color: Colors.blue.shade900,
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              child: Text(
+                                                "Save",
+                                                style: GoogleFonts.montserrat(
+                                                  color: Colors.white,
                                                 ),
                                               ),
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   );
