@@ -41,6 +41,10 @@ class Exercise {
   }
 
   String getLink() {
+    String link='${name.toLowerCase().split(' ')[0]}/male/chest/';
+    return link+name.toLowerCase().replaceAll(" ", "-");
+  }
+  String getvideoLink() {
     return name.toLowerCase().replaceAll(" ", "-");
   }
 
