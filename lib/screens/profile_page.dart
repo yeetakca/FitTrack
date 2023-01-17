@@ -380,515 +380,728 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.grey.shade900,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 32),
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-              decoration: BoxDecoration(
-                color: Colors.blue.shade900,
-                borderRadius: BorderRadius.circular(8),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 32),
+                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: user.gender == "Male"
+                            ? Colors.blue
+                            : user.gender == "Female"
+                                ? Colors.pink.shade300
+                                : Colors.grey.shade700,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: const Icon(
+                        Icons.account_circle,
+                        color: Colors.white,
+                        size: 75,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      user.name,
+                      style: GoogleFonts.montserrat(
+                        color: Colors.white,
+                        fontSize: 16,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              child: Column(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(4),
                     decoration: BoxDecoration(
-                      color: user.gender == "Male"
-                          ? Colors.blue
-                          : user.gender == "Female"
-                              ? Colors.pink.shade300
-                              : Colors.grey.shade700,
-                      borderRadius: BorderRadius.circular(100),
+                      color: Colors.blue.shade900,
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                    child: const Icon(
-                      Icons.account_circle,
-                      color: Colors.white,
-                      size: 75,
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Age",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        const SizedBox(
+                          height: 10,
+                          width: 75,
+                          child: Divider(thickness: 1, color: Colors.white38),
+                        ),
+                        Text(
+                          user.age == 0 ? "?" : user.age.toString(),
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    user.name,
-                    style: GoogleFonts.montserrat(
-                      color: Colors.white,
-                      fontSize: 16,
-                      letterSpacing: 2,
+                  const SizedBox(width: 32),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue.shade900,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Height",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        const SizedBox(
+                          height: 10,
+                          width: 75,
+                          child: Divider(thickness: 1, color: Colors.white38),
+                        ),
+                        Text(
+                          user.height == 0 ? "?" : user.height.toString(),
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade900,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Text(
-                        "Age",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(height: 3),
-                      const SizedBox(
-                        height: 10,
-                        width: 75,
-                        child: Divider(thickness: 1, color: Colors.white38),
-                      ),
-                      Text(
-                        user.age == 0 ? "?" : user.age.toString(),
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+              const SizedBox(height: 32),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
                 ),
-                const SizedBox(width: 32),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade900,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Text(
-                        "Height",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          "Weight",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 3),
-                      const SizedBox(
-                        height: 10,
-                        width: 75,
-                        child: Divider(thickness: 1, color: Colors.white38),
-                      ),
-                      Text(
-                        user.height == 0 ? "?" : user.height.toString(),
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
+                        const SizedBox(height: 3),
+                        const SizedBox(
+                          height: 10,
+                          width: 75,
+                          child: Divider(thickness: 1, color: Colors.white38),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 32),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.blue.shade900,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        "Weight",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
+                        Text(
+                          user.weightHistory.isNotEmpty
+                              ? user.weightHistory.last[1].toString()
+                              : "?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 3),
-                      const SizedBox(
-                        height: 10,
-                        width: 75,
-                        child: Divider(thickness: 1, color: Colors.white38),
-                      ),
-                      Text(
-                        user.weightHistory.isNotEmpty
-                            ? user.weightHistory.last[1].toString()
-                            : "?",
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(width: 16),
-                  Column(
-                    children: [
-                      GestureDetector(
-                        child: const Icon(
-                          Icons.history,
-                          color: Colors.white,
-                        ),
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return StatefulBuilder(
-                                builder: (context, setState) {
-                                  return AlertDialog(
-                                    title: Column(
-                                      children: [
-                                        Text(
-                                          "Weight History",
-                                          style: GoogleFonts.montserrat(
-                                            color: Colors.white,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        const SizedBox(height: 4),
-                                        Text(
-                                          "(Press and hold the item you want to delete)",
-                                          style: GoogleFonts.montserrat(
-                                            color: Colors.white38,
-                                            fontSize: 16,
-                                          ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ],
-                                    ),
-                                    backgroundColor: Colors.grey.shade900,
-                                    titlePadding: const EdgeInsets.all(24),
-                                    contentPadding: const EdgeInsets.symmetric(horizontal: 24),
-                                    actionsPadding: const EdgeInsets.all(24),
-                                    content: SingleChildScrollView(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: user.weightHistory.isEmpty 
-                                          ? [Text(
-                                            "There is no recorded weight history.",
-                                            style: GoogleFonts.montserrat(
-                                              color: Colors.white38,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          )] 
-                                          : user.weightHistory.map((e) {
-                                          return GestureDetector(
-                                            onLongPress: () {
-                                              showDialog(
-                                                context: context,
-                                                builder: (context) {
-                                                  return AlertDialog(
-                                                    title: Text(
-                                                      "Delete?",
-                                                      style: GoogleFonts.montserrat(
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                    backgroundColor: Colors.grey.shade900,
-                                                    titlePadding: const EdgeInsets.all(24),
-                                                    contentPadding: const EdgeInsets.symmetric(horizontal: 24),
-                                                    actionsPadding: const EdgeInsets.all(8),
-                                                    content: Text(
-                                                      "Are you sure you want to delete this weight record? (This process cannot be undone.)",
-                                                      style: GoogleFonts.montserrat(
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () {
-                                                          Navigator.of(context).pop();
-                                                        },
-                                                        child: Text(
-                                                          "Cancel",
-                                                          style: GoogleFonts.montserrat(
-                                                            color: Colors.blue.shade900,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding: const EdgeInsets.only(right: 8),
-                                                        child: TextButton(
-                                                          onPressed: () {
-                                                            setState(() {
-                                                              user.weightHistory.removeWhere((element) => element == e);
-                                                              saveUser();
-                                                              update();
-                                                            });
-                                                            Navigator.of(context).pop();
-                                                          },
-                                                          child: Text(
-                                                            "Delete",
-                                                            style: GoogleFonts.montserrat(
-                                                              color: Colors.red,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  );
-                                                },
-                                              );                               
-                                            },
-                                            child: Container(
-                                              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
-                                              margin: user.weightHistory.last != e ? const EdgeInsets.only(bottom: 8) : const EdgeInsets.only(),
-                                              decoration: BoxDecoration(
-                                                color: Colors.black45,
-                                                borderRadius: BorderRadius.circular(8),
-                                              ),
-                                              child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                                children: [
-                                                  Text(
-                                                    DateFormat('dd - MM - yyyy').format(DateTime.fromMillisecondsSinceEpoch(e[0])),
-                                                    style: GoogleFonts.montserrat(
-                                                      color: Colors.blue.shade900,
-                                                    ),
-                                                  ),
-                                                  Row(
-                                                    children: [
-                                                      Text(
-                                                        e[1].toString(),
-                                                        style: GoogleFonts.montserrat(
-                                                          color: Colors.white,
-                                                        ),
-                                                      ),
-                                                      const SizedBox(width: 8),
-                                                      Text(
-                                                        "KG",
-                                                        style: GoogleFonts.montserrat(
-                                                          color: Colors.white38,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                    actions: [
-                                      Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            TextButton(
-                                              onPressed: () {
-                                                Navigator.of(context).pop();
-                                              },
-                                              child: Container(
-                                                padding: const EdgeInsets
-                                                        .symmetric(
-                                                    horizontal: 16,
-                                                    vertical: 8),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.blue.shade900,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8),
-                                                ),
-                                                child: Text(
-                                                  "OK",
-                                                  style:
-                                                      GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                    ],
-                                  );
-                                },
-                              );
-                            },
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 8),
-                      GestureDetector(
-                        child: const Icon(
-                          Icons.edit,
-                          color: Colors.white,
-                        ),
-                        onTap: () {
-                          showDialog(
+                      ],
+                    ),
+                    const SizedBox(width: 16),
+                    Column(
+                      children: [
+                        GestureDetector(
+                          child: const Icon(
+                            Icons.history,
+                            color: Colors.white,
+                          ),
+                          onTap: () {
+                            showDialog(
                               context: context,
                               builder: (context) {
-                                int val1 = user.weightHistory.isNotEmpty
-                                    ? int.parse(user.weightHistory.last[1]
-                                        .toString()
-                                        .split(".")[0])
-                                    : 60;
-                                int val2 = user.weightHistory.isNotEmpty
-                                    ? int.parse(user.weightHistory.last[1]
-                                        .toString()
-                                        .split(".")[1])
-                                    : 0;
                                 return StatefulBuilder(
                                   builder: (context, setState) {
                                     return AlertDialog(
-                                      title: Text(
-                                        "Edit Weight",
-                                        style: GoogleFonts.montserrat(
-                                          color: Colors.white,
-                                        ),
-                                        textAlign: TextAlign.center,
+                                      title: Column(
+                                        children: [
+                                          Text(
+                                            "Weight History",
+                                            style: GoogleFonts.montserrat(
+                                              color: Colors.white,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            "(Press and hold the item you want to delete)",
+                                            style: GoogleFonts.montserrat(
+                                              color: Colors.white38,
+                                              fontSize: 16,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ],
                                       ),
                                       backgroundColor: Colors.grey.shade900,
                                       titlePadding: const EdgeInsets.all(24),
                                       contentPadding: const EdgeInsets.symmetric(horizontal: 24),
                                       actionsPadding: const EdgeInsets.all(24),
-                                      content: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          const Icon(Icons.arrow_drop_up,
-                                              color: Colors.white38),
-                                          const Divider(
-                                            thickness: 1,
-                                            color: Colors.white38,
-                                            indent: 32,
-                                            endIndent: 32,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              NumberPicker(
-                                                minValue: 1,
-                                                maxValue: 300,
-                                                value: val1,
-                                                onChanged: (value) {
-                                                  setState(() {
-                                                    val1 = value;
-                                                  });
-                                                },
-                                                selectedTextStyle:
-                                                    GoogleFonts.montserrat(
-                                                  color: Colors.blue.shade900,
-                                                  fontSize: 32,
-                                                ),
-                                                itemCount: 1,
-                                                itemWidth: 65,
+                                      content: SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: user.weightHistory.isEmpty 
+                                            ? [Text(
+                                              "There is no recorded weight history.",
+                                              style: GoogleFonts.montserrat(
+                                                color: Colors.white38,
                                               ),
-                                              Text(
-                                                ",",
-                                                style: GoogleFonts.montserrat(
-                                                  color: Colors.white38,
-                                                  fontSize: 32,
+                                              textAlign: TextAlign.center,
+                                            )] 
+                                            : user.weightHistory.map((e) {
+                                            return GestureDetector(
+                                              onLongPress: () {
+                                                showDialog(
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return AlertDialog(
+                                                      title: Text(
+                                                        "Delete?",
+                                                        style: GoogleFonts.montserrat(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                      backgroundColor: Colors.grey.shade900,
+                                                      titlePadding: const EdgeInsets.all(24),
+                                                      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                                                      actionsPadding: const EdgeInsets.all(8),
+                                                      content: Text(
+                                                        "Are you sure you want to delete this weight record? (This process cannot be undone.)",
+                                                        style: GoogleFonts.montserrat(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                      actions: [
+                                                        TextButton(
+                                                          onPressed: () {
+                                                            Navigator.of(context).pop();
+                                                          },
+                                                          child: Text(
+                                                            "Cancel",
+                                                            style: GoogleFonts.montserrat(
+                                                              color: Colors.blue.shade900,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(right: 8),
+                                                          child: TextButton(
+                                                            onPressed: () {
+                                                              setState(() {
+                                                                user.weightHistory.removeWhere((element) => element == e);
+                                                                saveUser();
+                                                                update();
+                                                              });
+                                                              Navigator.of(context).pop();
+                                                            },
+                                                            child: Text(
+                                                              "Delete",
+                                                              style: GoogleFonts.montserrat(
+                                                                color: Colors.red,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
+                                                );                               
+                                              },
+                                              child: Container(
+                                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                                                margin: user.weightHistory.last != e ? const EdgeInsets.only(bottom: 8) : const EdgeInsets.only(),
+                                                decoration: BoxDecoration(
+                                                  color: Colors.black45,
+                                                  borderRadius: BorderRadius.circular(8),
+                                                ),
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                  children: [
+                                                    Text(
+                                                      DateFormat('dd - MM - yyyy').format(DateTime.fromMillisecondsSinceEpoch(e[0])),
+                                                      style: GoogleFonts.montserrat(
+                                                        color: Colors.blue.shade900,
+                                                      ),
+                                                    ),
+                                                    Row(
+                                                      children: [
+                                                        Text(
+                                                          e[1].toString(),
+                                                          style: GoogleFonts.montserrat(
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                        const SizedBox(width: 8),
+                                                        Text(
+                                                          "KG",
+                                                          style: GoogleFonts.montserrat(
+                                                            color: Colors.white38,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ],
                                                 ),
                                               ),
-                                              NumberPicker(
-                                                minValue: 0,
-                                                maxValue: 99,
-                                                infiniteLoop: true,
-                                                zeroPad: true,
-                                                value: val2,
-                                                onChanged: (value) {
-                                                  setState(() {
-                                                    val2 = value;
-                                                  });
-                                                },
-                                                selectedTextStyle:
-                                                    GoogleFonts.montserrat(
-                                                  color: Colors.blue.shade900,
-                                                  fontSize: 32,
-                                                ),
-                                                itemCount: 1,
-                                                itemWidth: 65,
-                                              ),
-                                              Text(
-                                                "KG",
-                                                style: GoogleFonts.montserrat(
-                                                  color: Colors.white38,
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                          const Divider(
-                                            thickness: 1,
-                                            color: Colors.white38,
-                                            indent: 32,
-                                            endIndent: 32,
-                                          ),
-                                          const Icon(Icons.arrow_drop_down,
-                                              color: Colors.white38),
-                                        ],
+                                            );
+                                          }).toList(),
+                                        ),
                                       ),
                                       actions: [
                                         Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            TextButton(
-                                              onPressed: () {
-                                                Navigator.of(context).pop();
-                                              },
-                                              child: Container(
-                                                padding: const EdgeInsets
-                                                        .symmetric(
-                                                    horizontal: 16,
-                                                    vertical: 8),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.red.shade900,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8),
-                                                ),
-                                                child: Text(
-                                                  "Cancel",
-                                                  style:
-                                                      GoogleFonts.montserrat(
-                                                    color: Colors.white,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              TextButton(
+                                                onPressed: () {
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: Container(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 16,
+                                                      vertical: 8),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.blue.shade900,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8),
+                                                  ),
+                                                  child: Text(
+                                                    "OK",
+                                                    style:
+                                                        GoogleFonts.montserrat(
+                                                      color: Colors.white,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                            TextButton(
-                                              onPressed: () {
-                                                user.updateWeight(
-                                                    double.parse(
-                                                        "$val1.$val2"));
-                                                Navigator.of(context).pop();
-                                                saveUser();
-                                                update();
-                                              },
-                                              child: Container(
-                                                padding: const EdgeInsets
-                                                        .symmetric(
-                                                    horizontal: 16,
-                                                    vertical: 8),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.blue.shade900,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8),
-                                                ),
-                                                child: Text(
-                                                  "Save",
-                                                  style:
-                                                      GoogleFonts.montserrat(
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
+                                            ],
+                                          ),
                                       ],
                                     );
                                   },
                                 );
-                              });
-                        },
-                      ),
-                    ],
-                  ),
-                ],
+                              },
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 8),
+                        GestureDetector(
+                          child: const Icon(
+                            Icons.edit,
+                            color: Colors.white,
+                          ),
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  int val1 = user.weightHistory.isNotEmpty
+                                      ? int.parse(user.weightHistory.last[1]
+                                          .toString()
+                                          .split(".")[0])
+                                      : 60;
+                                  int val2 = user.weightHistory.isNotEmpty
+                                      ? int.parse(user.weightHistory.last[1]
+                                          .toString()
+                                          .split(".")[1])
+                                      : 0;
+                                  return StatefulBuilder(
+                                    builder: (context, setState) {
+                                      return AlertDialog(
+                                        title: Text(
+                                          "Edit Weight",
+                                          style: GoogleFonts.montserrat(
+                                            color: Colors.white,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        backgroundColor: Colors.grey.shade900,
+                                        titlePadding: const EdgeInsets.all(24),
+                                        contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                                        actionsPadding: const EdgeInsets.all(24),
+                                        content: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            const Icon(Icons.arrow_drop_up,
+                                                color: Colors.white38),
+                                            const Divider(
+                                              thickness: 1,
+                                              color: Colors.white38,
+                                              indent: 32,
+                                              endIndent: 32,
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                NumberPicker(
+                                                  minValue: 1,
+                                                  maxValue: 300,
+                                                  value: val1,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      val1 = value;
+                                                    });
+                                                  },
+                                                  selectedTextStyle:
+                                                      GoogleFonts.montserrat(
+                                                    color: Colors.blue.shade900,
+                                                    fontSize: 32,
+                                                  ),
+                                                  itemCount: 1,
+                                                  itemWidth: 65,
+                                                ),
+                                                Text(
+                                                  ",",
+                                                  style: GoogleFonts.montserrat(
+                                                    color: Colors.white38,
+                                                    fontSize: 32,
+                                                  ),
+                                                ),
+                                                NumberPicker(
+                                                  minValue: 0,
+                                                  maxValue: 99,
+                                                  infiniteLoop: true,
+                                                  zeroPad: true,
+                                                  value: val2,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      val2 = value;
+                                                    });
+                                                  },
+                                                  selectedTextStyle:
+                                                      GoogleFonts.montserrat(
+                                                    color: Colors.blue.shade900,
+                                                    fontSize: 32,
+                                                  ),
+                                                  itemCount: 1,
+                                                  itemWidth: 65,
+                                                ),
+                                                Text(
+                                                  "KG",
+                                                  style: GoogleFonts.montserrat(
+                                                    color: Colors.white38,
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            const Divider(
+                                              thickness: 1,
+                                              color: Colors.white38,
+                                              indent: 32,
+                                              endIndent: 32,
+                                            ),
+                                            const Icon(Icons.arrow_drop_down,
+                                                color: Colors.white38),
+                                          ],
+                                        ),
+                                        actions: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              TextButton(
+                                                onPressed: () {
+                                                  Navigator.of(context).pop();
+                                                },
+                                                child: Container(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 16,
+                                                      vertical: 8),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.red.shade900,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8),
+                                                  ),
+                                                  child: Text(
+                                                    "Cancel",
+                                                    style:
+                                                        GoogleFonts.montserrat(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              TextButton(
+                                                onPressed: () {
+                                                  user.updateWeight(
+                                                      double.parse(
+                                                          "$val1.$val2"));
+                                                  Navigator.of(context).pop();
+                                                  saveUser();
+                                                  update();
+                                                },
+                                                child: Container(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 16,
+                                                      vertical: 8),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.blue.shade900,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8),
+                                                  ),
+                                                  child: Text(
+                                                    "Save",
+                                                    style:
+                                                        GoogleFonts.montserrat(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                });
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 32),
+              Text(
+                "Suggested Calorie\nIntake",
+                style: GoogleFonts.montserrat(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.white38,
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        "Sedentary\n(little or no exercise)",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          user.calculateBMR() != 0 ? (user.calculateBMR()*1.2).toStringAsFixed(1) : "?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          "cal",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white38,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        "Lightly active\n(exercise 1-3 days/week)",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          user.calculateBMR() != 0 ? (user.calculateBMR()*1.375).toStringAsFixed(1) : "?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          "cal",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white38,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        "Moderately active\n(exercise 3-5 days/week)",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          user.calculateBMR() != 0 ? (user.calculateBMR()*1.55).toStringAsFixed(1) : "?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          "cal",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white38,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        "Active\n(exercise 6-7 days/week)",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          user.calculateBMR() != 0 ? (user.calculateBMR()*1.725).toStringAsFixed(1) : "?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          "cal",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white38,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade900,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        "Very active\n(hard exercise 6-7 days/week)",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          user.calculateBMR() != 0 ? (user.calculateBMR()*1.9).toStringAsFixed(1) : "?",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          "cal",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.white38,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 96),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

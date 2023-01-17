@@ -1,0 +1,3297 @@
+{
+    "Biceps":[
+       {
+          "Exercise":"Barbell Curl",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Hammer Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Goblet Curl",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Concentration Curl",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Preacher Curl",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Single Arm Curl",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Biceps Stretch Variation Five",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Biceps Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Biceps Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Biceps Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Biceps Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Chin Ups",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Twisting Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Bayesian Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Reverse Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Hammer Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Curl",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Hammer Curl",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Kneeling Single Arm Pulldown",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Reverse Curl",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Reverse Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Reverse Curl",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Long Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Meadows Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Pronated Pendlay Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pronated Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Supinated Pendlay Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Supinated Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Incline Hammer Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Incline Reverse Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Incline Zottman Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Pendlay Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Kneeling Single Arm Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Laying Incline Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Pendlay Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Preacher Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Row Knee",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Spider Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Spider Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Twisting Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Chest":[
+       {
+          "Exercise":"Barbell Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dips",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Incline Chest Flys",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Incline Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Chest Press",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Single Arm Chest Fly",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Single Arm Press",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Walkover Pushup",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Chest Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Chest Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Chest Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Chest Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Push Up",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Incline Push Up",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Decline Push Up",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Pec Fly",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Chest Press",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pec Fly",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Chest Press",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pushup",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Floor Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Hooklying Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Larsen Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Spoto Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Chest Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Alternating Single Arm Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Decline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Chest Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Guillotine Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Decline Neutral Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Single Arm Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Decline Squeeze Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Guillotine Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Guillotine Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Incline Chest Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Internally Rotated Chest Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Internally Rotated Incline Chest Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Squeeze Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       }
+    ],
+    "Quads":[
+       {
+          "Exercise":"Barbell Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Machine Leg Press",
+          "Equipment":"Machine",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Machine Leg Extension",
+          "Equipment":"Machine",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Bulgarian Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Step Up",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Goblet Squat",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Heels Up Goblet Squat",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Reverse Lunge",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Forward Lunge",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Lateral Lunge",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Quads Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Quads Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Quads Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Quads Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Side Lunges",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forward Lunges",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Jump Squats",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Bodyweight Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Curtsy Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Goblet Squat",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Split Squat",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Standing Leg Extension",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Spanish Squat",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Leg Press",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Squat",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Glute Bridge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Bulgarian Split Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Front Squat Olympic",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Front Squat Bodybuilding",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Sumo Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell High Bar Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Low Bar Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Coan Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Curtsy Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Forward Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Front Rack Step Up",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Heels Up Back Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Heels Up Front Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Lateral Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pause Box Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pause Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Reverse Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Reverse Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Bodyweight Reverse Step Up",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Side Step Up",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Split Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Step Up Balance",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Step Up",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Tap Pause Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Zercher Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Assisted Bulgarian Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Bulgarian Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Curtsy Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Forward Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Heels Up Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Lateral Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Reverse Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Forward Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Curtsy Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Forward Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Lateral Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Reverse Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Lateral Lunge Reach",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Reverse Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Front Rack Pause Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Front Rack Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Pulse Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Heels Up Goblet Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Heels Up Narrow Goblet Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Leg Extension",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Offset Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Sumo Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Thruster",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       }
+    ],
+    "Traps":[
+       {
+          "Exercise":"Dumbbell Seated Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Smith Machine Standing Shrugs",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Shrug",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Upright Row",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Silverback Shrug",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Incline Shrug",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Traps Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Traps Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Traps Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Elevated Pike Shoulder Shrug",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Elevated Pike Press",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Silverback Shrug",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Upright Row",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable 30 Degree Shrug",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Silverback Shrug",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Horizontal Shrug",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Single Arm Overhead Press",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Shrug",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Upright Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Shrug",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Z Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Laying 30 Degree Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Laying Silverback Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Silverback Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Triceps":[
+       {
+          "Exercise":"Dips narrow elbows",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Seated Overhead Tricep Extension",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Machine Cable V Bar Push Downs",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Bench Dips",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Laying Triceps Extensions",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Skull Crusher",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Kettlebell Standing Tricep Extension",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Decline Skull Crusher",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Kettlebell Tate Press",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Triceps Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Triceps Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Triceps Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Diamond Push Ups",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dips",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Close Grip Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Push Down",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Cross Pushdown",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Skullcrusher",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Overhead Tricep Extension",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Overhead Tricep Extension",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Pushdown",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pushup",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Skullcrusher",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Skullcrusher",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Floor Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Skullcrusher",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Overhead Tricep Extension",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Hooklying Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Larsen Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Spoto Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Z Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Single Arm Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Alternating Single Arm Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Decline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Guillotine Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Decline Neutral Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Single Arm Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Decline Skullcrusher",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Squeeze Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Guillotine Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Guillotine Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Incline Bench Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Seated Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Rolling Tricep Extension",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Seated Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Squeeze Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Alternating Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Overhead Tricep Extension",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Push Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Neutral Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Tricep Kickback",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Shoulders":[
+       {
+          "Exercise":"Dumbbell Lateral Raise",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Rear Delt Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Machine Face Pulls",
+          "Equipment":"Machine",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Seated Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Front Raise",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Seated Rear Delt Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Rear Delt Row",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Front Raise",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Single Arm Rear Delt Fly",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Long Lever Lateral Raise",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Single Arm Lateral Raise",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Shoulders Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Shoulders Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Shoulders Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Shoulders Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Elevated Pike Shoulder Shrug",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Elevated Pike Press",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Overhead Press",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Lateral Raise",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Rear Delt Fly",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Upright Row",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Face Pull",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Front Raise",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Horizontal Shrug",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Lateral Raise",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Pull Apart",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Single Arm Overhead Press",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Front Raise",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Overhead Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Upright Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Rear Delt Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Z Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Single Arm Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Bayesian Lateral Raise",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Decline Squeeze Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Laying Reverse Fly",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Laying Reverse Fly Internally Rotated",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Seated Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Seated Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Alternating Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Neutral Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Push Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Arnold Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Neutral Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Overhead Press",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Thruster",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       }
+    ],
+    "Lats":[
+       {
+          "Exercise":"Machine Pulldown",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Machine Seated Cable Row",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Pull Ups",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Row Bilateral",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Bent Over Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Row",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Shoulder Extension",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Single Arm Row",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Pullover",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Lats Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Lats Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Lats Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Inverted Row",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Lat Prayer",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Pullover",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Pull In",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Kneeling Single Arm Pulldown",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pullover",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Row",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Row Unilateral",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Long Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Meadows Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Pronated Pendlay Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pronated Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Supinated Pendlay Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Supinated Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Pullover",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Alternating Pendlay Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Kneeling Single Arm Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Laying Incline Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Pendlay Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Renegade Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Shoulder Extension",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Arm Row Knee",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Hamstrings":[
+       {
+          "Exercise":"Barbell Stiff Leg Deadlifts",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Machine Hamstring Curl",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Ball Hamstring Curl",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Deadlift",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Swing",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Single Leg Deadlift",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Kettlebell Staggered Deadlift",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hamstrings Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hamstrings Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hamstrings Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hamstrings Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Good Mornings",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kickbacks",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Single Legged Romanian Deadlifts",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Nordic Hamstring Curl",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Romanian Deadlift",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Single Leg Deadlift",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Pull Through",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Hamstring Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Good Morning",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pullthrough",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Romanian Deadlift",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Good Morning",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Romanian Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Glute Bridge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell High Bar Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Low Bar Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Staggered Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Single Leg Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Romanian Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Goblet Good Morning",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Snatch Grip Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Snatch Grip Romanian Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Suitcase Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Zercher Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Reverse Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Leg Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Single Arm Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Stiff Leg Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Staggered Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Swing",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Glutes":[
+       {
+          "Exercise":"Glute Bridge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Hip Thrust",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Single Leg Glute Bridge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Glute Bridge",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Single Leg Glute Bridge",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Hip Thrust",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Single Leg Hip Thrust",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Glutes Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Glutes Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Glutes Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Side Lunges",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forward Lunges",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Jump Squats",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Good Mornings",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Curtsy Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Goblet Squat",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Split Squat",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Romanian Deadlift",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Single Leg Deadlift",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Pull Through",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Hip Abduction",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Glute Kickback",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Spanish Squat",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Good Morning",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Glute Kickback",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Leg Press",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Band Pullthrough",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Romanian Deadlift",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Squat",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Good Morning",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Hip Thrust",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Romanian Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Glute Bridge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Bulgarian Split Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Front Squat Olympic",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Front Squat Bodybuilding",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell High Bar Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Low Bar Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Sumo Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Staggered Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Single Leg Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Romanian Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell High Bar Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Low Bar Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Coan Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Curtsy Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Forward Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Front Rack Step Up",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Glute Bridge",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Heels Up Back Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Heels Up Front Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Lateral Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pause Box Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pause Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Reverse Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Reverse Lunge",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Side Step Up",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Snatch Grip Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Snatch Grip Romanian Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Split Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Step Up Balance",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Step Up",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Suitcase Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Tap Pause Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Zercher Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Zercher Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Assisted Bulgarian Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Bulgarian Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Curtsy Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Forward Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Heels Up Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Lateral Lunge",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Split Squat",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Forward Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Bulgarian Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Curtsy Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Forward Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Lateral Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Reverse Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Lateral Lunge Reach",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Reverse Lunge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Split Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Figure Four Glute Bridge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Figure Four Hip Thrust",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Front Rack Pause Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Front Rack Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Pulse Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Heels Up Goblet Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Heels Up Narrow Goblet Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Offset Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Glute Bridge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Hip Thrust",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Single Arm Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Stiff Leg Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Staggered Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Staggered Glute Bridge",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Staggered Hip thrust",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Sumo Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Swing",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Thruster",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       }
+    ],
+    "Forearms":[
+       {
+          "Exercise":"Barbell Behind The Back Wrist Curl",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Wrist Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Wrist Curl",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Farmers Carry",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Wrist Extension",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Wrist Curl",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forearms Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forearms Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forearms Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forearms Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Inverted Row",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Chin Ups",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Wrist Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Wrist Extension",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Reverse Curl",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Hammer Curl",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Reverse Curl",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Reverse Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Row Unilateral",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Reverse Curl",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Wrist Extension",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Long Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Meadows Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Pronated Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Incline Reverse Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Incline Zottman Curl",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       }
+    ],
+    "Calves":[
+       {
+          "Exercise":"Machine Standing Calf Raises",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Machine Seated Calf Raises",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Single Leg Calf Raise",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Calf Raise",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Seated Calf Raise",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Calves Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Calves Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Calves Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Tip Toe Walking",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Calf Raises",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Walking Calf Raises",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Calf Raises",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Calve Raise",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Calf Raise",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Calf Raise",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Calf Jump",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Seated Calf Raise",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Toes Up Calf Raise",
+          "Equipment":"Barbell",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Seated Calf Raise",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Abdominals":[
+       {
+          "Exercise":"Crunches",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Laying Leg Raises",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Machine Roll Outs",
+          "Equipment":"Machine",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Situp",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Russian Twist",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Windmill",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Abdominals Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Abdominals Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Abdominals Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Abdominals Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Forearm Plank",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hanging Knee Raises",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Barbell Roll Outs",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Standing Crunch",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Kneeling Crunch",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Crunch",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Situp",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Russian Twist",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Plank Pullthrough",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Situp",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Bodyweight Russian Twist",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Long Lever Plank",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Hand Plank",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hollow Hold",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Larsen Bench Press",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Half Kneeling Wood Chopper",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Hollow Hold",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Renegade Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       }
+    ],
+    "Lower Back":[
+       {
+          "Exercise":"Barbell Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Machine 45 Degree Back Extension",
+          "Equipment":"Machine",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Deadlift",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Swing",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Staggered Deadlift",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Goblet Good Morning",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Lower back Stretch Variation Four",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Lower back Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Lower back Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Lower back Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Good Mornings",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Supermans",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Pull Through",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Romanian Deadlift",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Single Leg Deadlift",
+          "Equipment":"Cables",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Glute Kickback",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Goblet Squat",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Good Morning",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pullthrough",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Romanian Deadlift",
+          "Equipment":"Band",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Row Bilateral",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Goblet Good Morning",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Romanian Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell High Bar Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Low Bar Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Sumo Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Staggered Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Single Leg Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Romanian Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Coan Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Pause Box Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Pause Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Pronated Pendlay Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Reverse Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Snatch Grip Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Snatch Grip Romanian Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Suitcase Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Supinated Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Zercher Good Morning",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Zercher Squat",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Front Rack Pause Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Single Arm Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Single Leg Stiff Leg Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Staggered Deadlift",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Sumo Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Swing",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Traps (Mid-back)":[
+       {
+          "Exercise":"Barbell Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Machine Seated Cable Row",
+          "Equipment":"Machine",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Row Bilateral",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Deadlift",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Row",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Silverback Shrug",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Incline Shrug",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Traps mid back Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Traps mid back Stretch Variation One",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Inverted Row",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Elevated Pike Press",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Pull Ups",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Cable Silverback Shrug",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pull Apart",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Row Unilateral",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Silverback Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Rear Delt Row",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Barbell Landmine Row",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Laying Silverback Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Silverback Shrug",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ],
+    "Obliques":[
+       {
+          "Exercise":"Barbell Landmine Side Bend",
+          "Equipment":"Barbell",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Wood Chopper",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Kettlebell Wood Chopper",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Cable Wood Chopper",
+          "Equipment":"Cables",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Band Wood Chopper",
+          "Equipment":"Band",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Russian Twist",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Kettlebell Russian Twist",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Band Pallof Press",
+          "Equipment":"Band",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Kettlebell Windmill",
+          "Equipment":"Kettlebells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Cable Pallof Press",
+          "Equipment":"Cables",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Abdominals Stretch Variation Three",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Abdominals Stretch Variation Two",
+          "Equipment":"Stretches",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Bodyweight Russian Twist",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Side Plank Up Down",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Side Plank Reach Through",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Elbow Side Plank",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Hand Side Plank",
+          "Equipment":"Bodyweight",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Barbell Suitcase Deadlift",
+          "Equipment":"Barbell",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Half Kneeling Wood Chopper",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Kneeling Wood Chopper",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Offset Squat",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Overhead Side Bend",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Advanced"
+       },
+       {
+          "Exercise":"Dumbbell Side Plank Up Down",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       },
+       {
+          "Exercise":"Dumbbell Hand Side Plank",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Intermediate"
+       },
+       {
+          "Exercise":"Dumbbell Elbow Side Plank",
+          "Equipment":"Dumbbells",
+          "Difficulty":"Beginner"
+       }
+    ]
+ }

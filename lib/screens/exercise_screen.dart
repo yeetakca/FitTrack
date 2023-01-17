@@ -30,41 +30,6 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
 
   Timer? timer;
 
-  // void startTimer(int minutesInput, int secondsInput) {
-  //   minutesInput = minutes;
-  //   secondsInput = seconds;
-  //   timer = Timer.periodic(const Duration(seconds: 1), _onTick);
-  // }
-  //
-  // void _onTick(Timer time) {
-  //   print(minutesInput);
-  //   print(secondsInput);
-  //   if (secondsInput <= 0 && minutesInput <= 0) {
-  //     setState(() {
-  //       isTimerStart = false;
-  //     });
-  //     timer?.cancel();
-  //   } else if(secondsInput <= 0 && minutesInput > 0){
-  //     setState(() {
-  //       --minutes;
-  //       --minutesInput;
-  //       seconds =59;
-  //       secondsInput =59;
-  //     });
-  //   }
-  //   else {
-  //     setState(() {
-  //       --seconds;
-  //       --secondsInput;
-  //     });
-  //   }
-  // }
-  // @override
-  // void dispose() {
-  //   timer?.cancel();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     List<Widget> setWidgets = [];
@@ -234,7 +199,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
             ),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 40),
-              margin: const EdgeInsets.fromLTRB(40, 8, 40, 16),
+              margin: const EdgeInsets.fromLTRB(40, 8, 40, 21),
               decoration: BoxDecoration(
                   color: Colors.grey.shade800,
                   borderRadius: BorderRadius.circular(15)),

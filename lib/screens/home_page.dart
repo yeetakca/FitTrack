@@ -6,6 +6,7 @@ import 'package:fit_track/classes/workout_plan.dart';
 import 'package:fit_track/components/exercise_widget.dart';
 import 'package:fit_track/screens/profile_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -18,13 +19,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<WorkoutPlan> workoutPlanList = [];
-  Map<String, List<String>> excel = {
-    'Chest': ['Barbell Bench Press', 'Dumbbell Incline Bench Press'],
-    'Shoulder': ['Dumbbell Lateral Raise', 'Dumbbell Seated Overhead Press'],
-    'Triceps': ['Dumbbell Skullcrusher', 'Dips'],
-  };
+  List<WorkoutPlan> preWorkoutPlanList = [
+    WorkoutPlan(name: "Push Day"),
+    WorkoutPlan(name: "Pull Day"),
+    WorkoutPlan(name: "Leg Day"),
+  ];
   
+  List<WorkoutPlan> workoutPlanList = [];
+
+  Map<String, dynamic> exercises = {};
+
   String welcomeText = "Welcome!";
   String? selectedWorkoutPlanId;
   WorkoutPlan? selectedWorkoutPlan;
@@ -41,6 +45,34 @@ class _HomePageState extends State<HomePage> {
     getWelcomeText().then((value) => setState(() {
           welcomeText = value;
         }));
+    readJson().then((value) => setState(() {
+      exercises = value;
+    }));
+
+    preWorkoutPlanList[0].addExercise("Barbell Bench Press", 5, 5, 60);
+    preWorkoutPlanList[0].addExercise("Dumbbell Incline Bench Press", 4, 10, 30);
+    preWorkoutPlanList[0].addExercise("Dumbbell Incline Chest Flys", 4, 10, 10);
+
+    preWorkoutPlanList[0].addExercise("Dumbbell Seated Overhead Press", 4, 10, 15);
+    preWorkoutPlanList[0].addExercise("Dumbbell Lateral Raise", 4, 15, 10);
+    preWorkoutPlanList[0].addExercise("Machine Face Pulls", 4, 12, 25);
+
+    preWorkoutPlanList[0].addExercise("Machine Cable V Bar Push Downs", 4, 12, 40);
+    preWorkoutPlanList[0].addExercise("Cable Push Down", 4, 12, 30);
+
+    preWorkoutPlanList[1].addExercise("Machine Pulldown", 4, 10, 50);
+    preWorkoutPlanList[1].addExercise("Dumbbell Row Unilateral", 4, 12, 20);
+    preWorkoutPlanList[1].addExercise("Machine Seated Cable Row", 4, 12, 40);
+    preWorkoutPlanList[1].addExercise("Dumbbell Romanian Deadlift", 4, 12, 50);
+
+    preWorkoutPlanList[1].addExercise("Dumbbell Curl", 4, 12, 12);
+    preWorkoutPlanList[1].addExercise("Dumbbell Hammer Curl", 4, 12, 12);
+    preWorkoutPlanList[1].addExercise("Barbell Curl", 4, 10, 20);
+
+    preWorkoutPlanList[2].addExercise("Machine Leg Extension", 4, 12, 80);
+    preWorkoutPlanList[2].addExercise("Machine Leg Press", 4, 12, 150);
+    preWorkoutPlanList[2].addExercise("Machine Hamstring Curl", 4, 12, 40);
+    preWorkoutPlanList[2].addExercise("Machine Standing Calf Raises", 4, 12, 50);
   }
 
   @override
@@ -67,8 +99,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => const ProfilePage()),
+              MaterialPageRoute(builder: (context) => const ProfilePage()),
             );
           },
           child: const Icon(
@@ -79,7 +110,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           PopupMenuButton(
             itemBuilder: (context) {
-              return {"Change Plan Name", "Delete Plan"}.map((item) {
+              return {"Change Plan Name", "Delete Plan", "Add Predefined Plan"}.map((item) {
                 return PopupMenuItem(
                   value: item,
                   child: Text(
@@ -92,28 +123,29 @@ class _HomePageState extends State<HomePage> {
               }).toList();
             },
             onSelected: (value) {
-              if (selectedWorkoutPlanId == null) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(
-                    "Please select a active workout plan.",
-                    style: GoogleFonts.montserrat(),
-                  ),
-                  action: SnackBarAction(
-                      label: 'OK!',
-                      onPressed: ScaffoldMessenger.of(context).clearSnackBars,
-                      textColor: Colors.blue.shade900),
-                ));
-                return;
-              }
               switch (value) {
                 case "Delete Plan":
+                  if (selectedWorkoutPlanId == null) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(
+                        "Please select a active workout plan.",
+                        style: GoogleFonts.montserrat(),
+                      ),
+                      action: SnackBarAction(
+                          label: 'OK!',
+                          onPressed: ScaffoldMessenger.of(context).clearSnackBars,
+                          textColor: Colors.blue.shade900),
+                    ));
+                    return;
+                  }
                   showDialog(
                     context: context,
                     builder: (context) {
                       return AlertDialog(
                         backgroundColor: Colors.grey.shade900,
                         titlePadding: const EdgeInsets.all(24),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                        contentPadding:
+                            const EdgeInsets.symmetric(horizontal: 24),
                         actionsPadding: const EdgeInsets.all(8),
                         title: Text(
                           "Delete?",
@@ -166,6 +198,19 @@ class _HomePageState extends State<HomePage> {
                   );
                   break;
                 case "Change Plan Name":
+                  if (selectedWorkoutPlanId == null) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(
+                        "Please select a active workout plan.",
+                        style: GoogleFonts.montserrat(),
+                      ),
+                      action: SnackBarAction(
+                          label: 'OK!',
+                          onPressed: ScaffoldMessenger.of(context).clearSnackBars,
+                          textColor: Colors.blue.shade900),
+                    ));
+                    return;
+                  }
                   showDialog(
                       context: context,
                       builder: (context) {
@@ -184,7 +229,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               backgroundColor: Colors.grey.shade900,
                               titlePadding: const EdgeInsets.all(24),
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                              contentPadding:
+                                  const EdgeInsets.symmetric(horizontal: 24),
                               actionsPadding: const EdgeInsets.all(24),
                               content: TextField(
                                 controller: changeWorkoutTextController,
@@ -250,8 +296,7 @@ class _HomePageState extends State<HomePage> {
                                         if (changeWorkoutTextController
                                             .text.isNotEmpty) {
                                           selectedWorkoutPlan!.name =
-                                              changeWorkoutTextController
-                                                  .text;
+                                              changeWorkoutTextController.text;
                                           Navigator.of(context).pop();
                                           saveWorkoutPlanList();
                                           update();
@@ -286,6 +331,125 @@ class _HomePageState extends State<HomePage> {
                           },
                         );
                       });
+                  break;
+                case "Add Predefined Plan":
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      String? selectedPreWorkoutPlan;
+                      bool addPlanButtonEnabled = false;
+                      return StatefulBuilder(
+                        builder: (context, setState) {
+                          return AlertDialog(
+                            title: Text(
+                              "Add Workout Plan",
+                              style: GoogleFonts.montserrat(
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            backgroundColor: Colors.grey.shade900,
+                            titlePadding: const EdgeInsets.all(24),
+                            contentPadding:
+                                const EdgeInsets.symmetric(horizontal: 24),
+                            actionsPadding: const EdgeInsets.all(24),
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                DropdownButton(
+                                  value: selectedPreWorkoutPlan,
+                                  items: preWorkoutPlanList.map((key) {
+                                    return DropdownMenuItem(
+                                      value: key.name,
+                                      child: Text(
+                                        key.name,
+                                        style: GoogleFonts.montserrat(),
+                                      ),
+                                    );
+                                  }).toList(),
+                                  hint: Text(
+                                    "Select a Plan",
+                                    textAlign: TextAlign.center,
+                                    style: GoogleFonts.montserrat(
+                                      color: Colors.white38,
+                                    ),
+                                  ),
+                                  onChanged: (value) {
+                                    setState(() {
+                                      if (value != null) {
+                                        addPlanButtonEnabled = true;
+                                      }else {
+                                        addPlanButtonEnabled = false;
+                                      }
+                                      selectedPreWorkoutPlan = value;
+                                    });
+                                  },
+                                  isExpanded: true,
+                                  iconSize: 32,
+                                  iconEnabledColor: Colors.grey.shade500,
+                                  dropdownColor: Colors.grey.shade800,
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            actions: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 16, vertical: 8),
+                                      decoration: BoxDecoration(
+                                        color: Colors.red.shade900,
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Text(
+                                        "Cancel",
+                                        style: GoogleFonts.montserrat(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      workoutPlanList.add(preWorkoutPlanList.firstWhere((element) => element.name == selectedPreWorkoutPlan));
+                                      saveWorkoutPlanList();
+                                      Navigator.of(context).pop();
+                                      update();
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 16, vertical: 8),
+                                      decoration: BoxDecoration(
+                                        color: addPlanButtonEnabled
+                                            ? Colors.blue.shade900
+                                            : Colors.grey.shade800,
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Text(
+                                        "Add",
+                                        style: GoogleFonts.montserrat(
+                                          color: addPlanButtonEnabled
+                                              ? Colors.white
+                                              : Colors.grey,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    });
                   break;
               }
             },
@@ -389,7 +553,8 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 backgroundColor: Colors.grey.shade900,
                                 titlePadding: const EdgeInsets.all(24),
-                                contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+                                contentPadding:
+                                    const EdgeInsets.symmetric(horizontal: 24),
                                 actionsPadding: const EdgeInsets.all(24),
                                 content: TextField(
                                   controller: addWorkoutTextController,
@@ -428,8 +593,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 actions: [
                                   Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       TextButton(
                                         onPressed: () {
@@ -547,283 +711,295 @@ class _HomePageState extends State<HomePage> {
             return;
           }
           showDialog(
-            context: context,
-            builder: (context) {
-              String? selectedBodyPart;
-              String? selectedExerciseName;
-              int targetSetCount = 4;
-              int targetRepCount = 12;
-              int targetWeightCount1 = 10;
-              int targetWeightCount2 = 0;
-              bool addExerciseButtonEnabled = false;
-              return StatefulBuilder(
-                builder: (context, setState) {
-                  return AlertDialog(
-                    title: Text(
-                      "Add Exercise",
-                      style: GoogleFonts.montserrat(
-                        color: Colors.white,
+              context: context,
+              builder: (context) {
+                String? selectedBodyPart;
+                String? selectedExerciseName;
+                int targetSetCount = 4;
+                int targetRepCount = 12;
+                int targetWeightCount1 = 10;
+                int targetWeightCount2 = 0;
+                bool addExerciseButtonEnabled = false;
+                List<String> exerciseNames = [];
+                return StatefulBuilder(
+                  builder: (context, setState) {
+                    if (selectedBodyPart != null) {
+                      exerciseNames.clear();
+                      for (var x in exercises[selectedBodyPart]) {
+                        exerciseNames.add(x["Exercise"]);
+                      }
+                    }
+                    return AlertDialog(
+                      title: Text(
+                        "Add Exercise",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                    backgroundColor: Colors.grey.shade900,
-                    titlePadding: const EdgeInsets.all(24),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 24),
-                    actionsPadding: const EdgeInsets.all(24),
-                    content: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        DropdownButton(
-                          value: selectedBodyPart,
-                          items: excel.keys.map((key) {
-                            return DropdownMenuItem(
-                              value: key,
-                              child: Text(
-                                key,
-                                style: GoogleFonts.montserrat(),
+                      backgroundColor: Colors.grey.shade900,
+                      titlePadding: const EdgeInsets.all(24),
+                      contentPadding:
+                          const EdgeInsets.symmetric(horizontal: 24),
+                      actionsPadding: const EdgeInsets.all(24),
+                      content: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          DropdownButton(
+                            value: selectedBodyPart,
+                            items: exercises.keys.map((key) {
+                              return DropdownMenuItem(
+                                value: key,
+                                child: Text(
+                                  key,
+                                  style: GoogleFonts.montserrat(),
                                 ),
-                            );
-                          }).toList(),
-                          hint: Text(
-                            "Select a Body Part",
-                            textAlign: TextAlign.center,
+                              );
+                            }).toList(),
+                            hint: Text(
+                              "Select a Body Part",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                color: Colors.white38,
+                              ),
+                            ),
+                            onChanged: (value) {
+                              setState(() {
+                                selectedBodyPart = value;
+                                selectedExerciseName = null;
+                                addExerciseButtonEnabled = false;
+                              });
+                            },
+                            isExpanded: true,
+                            iconSize: 32,
+                            iconEnabledColor: Colors.grey.shade500,
+                            dropdownColor: Colors.grey.shade800,
                             style: GoogleFonts.montserrat(
-                              color: Colors.white38,
+                              color: Colors.white,
                             ),
                           ),
-                          onChanged: (value) {
-                            setState(() {
-                              selectedBodyPart = value;
-                              selectedExerciseName = null;
-                              addExerciseButtonEnabled = false;
-                            });
-                          },
-                          isExpanded: true,
-                          iconSize: 32,
-                          iconEnabledColor: Colors.grey.shade500,
-                          dropdownColor: Colors.grey.shade800,
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                          ),
-                        ),
-                        DropdownButton(
-                          value: selectedExerciseName,
-                          items: selectedBodyPart == null ? null : excel[selectedBodyPart]!.map((key) {
-                            return DropdownMenuItem(
-                              value: key,
-                              child: Text(
-                                key,
-                                style: GoogleFonts.montserrat(),
-                                ),
-                            );
-                          }).toList(),
-                          hint: Text(
-                            "Select a Exercise",
-                            textAlign: TextAlign.center,
+                          DropdownButton(
+                            value: selectedExerciseName,
+                            items: selectedBodyPart == null
+                                ? null
+                                : exerciseNames.map((key) {
+                                    return DropdownMenuItem(
+                                      value: key,
+                                      child: Text(
+                                        key,
+                                        style: GoogleFonts.montserrat(),
+                                      ),
+                                    );
+                                  }).toList(),
+                            hint: Text(
+                              "Select a Exercise",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                color: Colors.white38,
+                              ),
+                            ),
+                            onChanged: (value) {
+                              setState(() {
+                                selectedExerciseName = value;
+                                if (selectedExerciseName != null) {
+                                  addExerciseButtonEnabled = true;
+                                }
+                              });
+                            },
+                            isExpanded: true,
+                            iconSize: 32,
+                            iconEnabledColor: Colors.grey.shade500,
+                            iconDisabledColor: Colors.red,
+                            dropdownColor: Colors.grey.shade800,
                             style: GoogleFonts.montserrat(
-                              color: Colors.white38,
+                              color: Colors.white,
                             ),
                           ),
-                          onChanged: (value) {
-                            setState(() {
-                              selectedExerciseName = value;
-                              if (selectedExerciseName != null) {
-                                addExerciseButtonEnabled = true;
-                              }
-                            });
-                          },
-                          isExpanded: true,
-                          iconSize: 32,
-                          iconEnabledColor: Colors.grey.shade500,
-                          iconDisabledColor: Colors.red,
-                          dropdownColor: Colors.grey.shade800,
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
+                          const SizedBox(height: 16),
+                          Text(
+                            "Set",
+                            style: GoogleFonts.montserrat(color: Colors.white),
                           ),
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          "Set",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(Icons.arrow_left,
+                                  color: Colors.white38),
+                              NumberPicker(
+                                minValue: 1,
+                                maxValue: 99,
+                                value: targetSetCount,
+                                onChanged: (value) {
+                                  setState(() {
+                                    targetSetCount = value;
+                                  });
+                                },
+                                selectedTextStyle: GoogleFonts.montserrat(
+                                  color: Colors.blue.shade900,
+                                  fontSize: 32,
+                                ),
+                                itemCount: 1,
+                                axis: Axis.horizontal,
+                                itemWidth: 45,
+                              ),
+                              const Icon(Icons.arrow_right,
+                                  color: Colors.white38),
+                            ],
                           ),
-                        ),
+                          const SizedBox(height: 16),
+                          Text(
+                            "Rep x Weight",
+                            style: GoogleFonts.montserrat(color: Colors.white),
+                          ),
+                          const SizedBox(height: 8),
+                          const Icon(Icons.arrow_drop_up,
+                              color: Colors.white38),
+                          const Divider(
+                            thickness: 1,
+                            color: Colors.white38,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              NumberPicker(
+                                minValue: 1,
+                                maxValue: 99,
+                                value: targetRepCount,
+                                onChanged: (value) {
+                                  setState(() {
+                                    targetRepCount = value;
+                                  });
+                                },
+                                selectedTextStyle: GoogleFonts.montserrat(
+                                  color: Colors.blue.shade900,
+                                  fontSize: 32,
+                                ),
+                                itemCount: 1,
+                                itemWidth: 65,
+                              ),
+                              const Icon(
+                                Icons.close,
+                                color: Colors.white38,
+                              ),
+                              NumberPicker(
+                                minValue: 0,
+                                maxValue: 500,
+                                value: targetWeightCount1,
+                                onChanged: (value) {
+                                  setState(() {
+                                    targetWeightCount1 = value;
+                                  });
+                                },
+                                selectedTextStyle: GoogleFonts.montserrat(
+                                  color: Colors.blue.shade900,
+                                  fontSize: 32,
+                                ),
+                                itemCount: 1,
+                                itemWidth: 65,
+                              ),
+                              Text(
+                                ",",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white38,
+                                  fontSize: 32,
+                                ),
+                              ),
+                              NumberPicker(
+                                minValue: 0,
+                                maxValue: 99,
+                                step: 25,
+                                infiniteLoop: true,
+                                zeroPad: true,
+                                value: targetWeightCount2,
+                                onChanged: (value) {
+                                  setState(() {
+                                    targetWeightCount2 = value;
+                                  });
+                                },
+                                selectedTextStyle: GoogleFonts.montserrat(
+                                  color: Colors.blue.shade900,
+                                  fontSize: 32,
+                                ),
+                                itemCount: 1,
+                                itemWidth: 65,
+                              ),
+                              Text(
+                                "KG",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white38,
+                                ),
+                              )
+                            ],
+                          ),
+                          const Divider(
+                            thickness: 1,
+                            color: Colors.white38,
+                          ),
+                          const Icon(Icons.arrow_drop_down,
+                              color: Colors.white38),
+                        ],
+                      ),
+                      actions: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Icon(Icons.arrow_left, color: Colors.white38),
-                            NumberPicker(
-                              minValue: 1,
-                              maxValue: 99,
-                              value: targetSetCount,
-                              onChanged: (value) {
-                                setState(() {
-                                  targetSetCount = value;
-                                });
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
                               },
-                              selectedTextStyle: GoogleFonts.montserrat(
-                                color: Colors.blue.shade900,
-                                fontSize: 32,
-                              ),
-                              itemCount: 1,
-                              axis: Axis.horizontal,
-                              itemWidth: 45,
-                            ),
-                            const Icon(Icons.arrow_right, color: Colors.white38),
-                          ],
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          "Rep x Weight",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        const Icon(Icons.arrow_drop_up, color: Colors.white38),
-                        const Divider(
-                          thickness: 1,
-                          color: Colors.white38,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            NumberPicker(
-                              minValue: 1,
-                              maxValue: 99,
-                              value: targetRepCount,
-                              onChanged: (value) {
-                                setState(() {
-                                  targetRepCount = value;
-                                });
-                              },
-                              selectedTextStyle: GoogleFonts.montserrat(
-                                color: Colors.blue.shade900,
-                                fontSize: 32,
-                              ),
-                              itemCount: 1,
-                              itemWidth: 65,
-                            ),
-                            const Icon(
-                              Icons.close,
-                              color: Colors.white38,
-                            ),
-                            NumberPicker(
-                              minValue: 0,
-                              maxValue: 500,
-                              value: targetWeightCount1,
-                              onChanged: (value) {
-                                setState(() {
-                                  targetWeightCount1 = value;
-                                });
-                              },
-                              selectedTextStyle: GoogleFonts.montserrat(
-                                color: Colors.blue.shade900,
-                                fontSize: 32,
-                              ),
-                              itemCount: 1,
-                              itemWidth: 65,
-                            ),
-                            Text(
-                              ",",
-                              style: GoogleFonts.montserrat(
-                                color: Colors.white38,
-                                fontSize: 32,
-                              ),
-                            ),
-                            NumberPicker(
-                              minValue: 0,
-                              maxValue: 99,
-                              step: 25,
-                              infiniteLoop: true,
-                              zeroPad: true,
-                              value: targetWeightCount2,
-                              onChanged: (value) {
-                                setState(() {
-                                  targetWeightCount2 = value;
-                                });
-                              },
-                              selectedTextStyle: GoogleFonts.montserrat(
-                                color: Colors.blue.shade900,
-                                fontSize: 32,
-                              ),
-                              itemCount: 1,
-                              itemWidth: 65,
-                            ),
-                            Text(
-                              "KG",
-                              style: GoogleFonts.montserrat(
-                                color: Colors.white38,
-                              ),
-                            )
-                          ],
-                        ),
-                        const Divider(
-                          thickness: 1,
-                          color: Colors.white38,
-                        ),
-                        const Icon(Icons.arrow_drop_down, color: Colors.white38),
-                      ],
-                    ),
-                    actions: [
-                      Row(
-                        mainAxisAlignment:
-                            MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 16, vertical: 8),
-                              decoration: BoxDecoration(
-                                color: Colors.red.shade900,
-                                borderRadius:
-                                    BorderRadius.circular(8),
-                              ),
-                              child: Text(
-                                "Cancel",
-                                style: GoogleFonts.montserrat(
-                                  color: Colors.white,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16, vertical: 8),
+                                decoration: BoxDecoration(
+                                  color: Colors.red.shade900,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  "Cancel",
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              selectedWorkoutPlan!.addExercise(selectedExerciseName!, targetSetCount, targetRepCount, double.parse("$targetWeightCount1.$targetWeightCount2"));
-                              saveWorkoutPlanList();
-                              Navigator.of(context).pop();
-                              update();
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 16, vertical: 8),
-                              decoration: BoxDecoration(
-                                color: addExerciseButtonEnabled
-                                  ? Colors.blue.shade900
-                                  : Colors.grey.shade800,
-                                borderRadius:
-                                    BorderRadius.circular(8),
-                              ),
-                              child: Text(
-                                "Add",
-                                style: GoogleFonts.montserrat(
+                            TextButton(
+                              onPressed: () {
+                                selectedWorkoutPlan!.addExercise(
+                                    selectedExerciseName!,
+                                    targetSetCount,
+                                    targetRepCount,
+                                    double.parse(
+                                        "$targetWeightCount1.$targetWeightCount2"));
+                                saveWorkoutPlanList();
+                                Navigator.of(context).pop();
+                                update();
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16, vertical: 8),
+                                decoration: BoxDecoration(
                                   color: addExerciseButtonEnabled
-                                    ? Colors.white
-                                    : Colors.grey,
+                                      ? Colors.blue.shade900
+                                      : Colors.grey.shade800,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  "Add",
+                                  style: GoogleFonts.montserrat(
+                                    color: addExerciseButtonEnabled
+                                        ? Colors.white
+                                        : Colors.grey,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  );
-                },
-              );
-            });
+                          ],
+                        ),
+                      ],
+                    );
+                  },
+                );
+              });
         },
         backgroundColor: Colors.blue.shade900,
         elevation: 20,
@@ -859,6 +1035,12 @@ class _HomePageState extends State<HomePage> {
     var sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setString(
         'workoutPlanStringList', jsonEncode(workoutPlanList));
+  }
+
+  Future<Map<String, dynamic>> readJson() async {
+    String response = await rootBundle.loadString('assets/exercises.json');
+    Map<String, dynamic> data = await json.decode(response);
+    return data;
   }
 
   Future<String> getWelcomeText() async {
