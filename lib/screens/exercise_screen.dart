@@ -171,7 +171,6 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
                         if (urllaunchable) {
                           await launchUrl(uri);
                         } else {
-                          print(url);
                           print("URL can't be launched.");
                         }
                       },

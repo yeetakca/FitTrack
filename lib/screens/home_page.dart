@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:math';
-import 'dart:developer' as dev;
 
 import 'package:fit_track/classes/workout_plan.dart';
 import 'package:fit_track/components/exercise_widget.dart';
@@ -24,7 +23,6 @@ class _HomePageState extends State<HomePage> {
     WorkoutPlan(name: "Pull Day"),
     WorkoutPlan(name: "Leg Day"),
   ];
-  
   List<WorkoutPlan> workoutPlanList = [];
 
   Map<String, dynamic> exercises = {};
@@ -46,18 +44,22 @@ class _HomePageState extends State<HomePage> {
           welcomeText = value;
         }));
     readJson().then((value) => setState(() {
-      exercises = value;
-    }));
+          exercises = value;
+        }));
 
     preWorkoutPlanList[0].addExercise("Barbell Bench Press", 5, 5, 60);
-    preWorkoutPlanList[0].addExercise("Dumbbell Incline Bench Press", 4, 10, 30);
+    preWorkoutPlanList[0]
+        .addExercise("Dumbbell Incline Bench Press", 4, 10, 30);
     preWorkoutPlanList[0].addExercise("Dumbbell Incline Chest Flys", 4, 10, 10);
 
-    preWorkoutPlanList[0].addExercise("Dumbbell Seated Overhead Press", 4, 10, 15);
+    preWorkoutPlanList[0]
+        .addExercise("Dumbbell Seated Overhead Press", 4, 10, 15);
     preWorkoutPlanList[0].addExercise("Dumbbell Lateral Raise", 4, 15, 10);
     preWorkoutPlanList[0].addExercise("Machine Face Pulls", 4, 12, 25);
 
-    preWorkoutPlanList[0].addExercise("Machine Cable V Bar Push Downs", 4, 12, 40);
+    preWorkoutPlanList[0]
+        .addExercise("Machine Cable V Bar Push Downs", 4, 12, 40);
+
     preWorkoutPlanList[0].addExercise("Cable Push Down", 4, 12, 30);
 
     preWorkoutPlanList[1].addExercise("Machine Pulldown", 4, 10, 50);
@@ -72,7 +74,8 @@ class _HomePageState extends State<HomePage> {
     preWorkoutPlanList[2].addExercise("Machine Leg Extension", 4, 12, 80);
     preWorkoutPlanList[2].addExercise("Machine Leg Press", 4, 12, 150);
     preWorkoutPlanList[2].addExercise("Machine Hamstring Curl", 4, 12, 40);
-    preWorkoutPlanList[2].addExercise("Machine Standing Calf Raises", 4, 12, 50);
+    preWorkoutPlanList[2]
+        .addExercise("Machine Standing Calf Raises", 4, 12, 50);
   }
 
   @override
@@ -110,7 +113,8 @@ class _HomePageState extends State<HomePage> {
         actions: [
           PopupMenuButton(
             itemBuilder: (context) {
-              return {"Change Plan Name", "Delete Plan", "Add Predefined Plan"}.map((item) {
+              return {"Change Plan Name", "Delete Plan", "Add Predefined Plan"}
+                  .map((item) {
                 return PopupMenuItem(
                   value: item,
                   child: Text(
@@ -133,7 +137,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                       action: SnackBarAction(
                           label: 'OK!',
-                          onPressed: ScaffoldMessenger.of(context).clearSnackBars,
+                          onPressed:
+                              ScaffoldMessenger.of(context).clearSnackBars,
                           textColor: Colors.blue.shade900),
                     ));
                     return;
@@ -206,7 +211,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                       action: SnackBarAction(
                           label: 'OK!',
-                          onPressed: ScaffoldMessenger.of(context).clearSnackBars,
+                          onPressed:
+                              ScaffoldMessenger.of(context).clearSnackBars,
                           textColor: Colors.blue.shade900),
                     ));
                     return;
@@ -334,122 +340,127 @@ class _HomePageState extends State<HomePage> {
                   break;
                 case "Add Predefined Plan":
                   showDialog(
-                    context: context,
-                    builder: (context) {
-                      String? selectedPreWorkoutPlan;
-                      bool addPlanButtonEnabled = false;
-                      return StatefulBuilder(
-                        builder: (context, setState) {
-                          return AlertDialog(
-                            title: Text(
-                              "Add Workout Plan",
-                              style: GoogleFonts.montserrat(
-                                color: Colors.white,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            backgroundColor: Colors.grey.shade900,
-                            titlePadding: const EdgeInsets.all(24),
-                            contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 24),
-                            actionsPadding: const EdgeInsets.all(24),
-                            content: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                DropdownButton(
-                                  value: selectedPreWorkoutPlan,
-                                  items: preWorkoutPlanList.map((key) {
-                                    return DropdownMenuItem(
-                                      value: key.name,
-                                      child: Text(
-                                        key.name,
-                                        style: GoogleFonts.montserrat(),
-                                      ),
-                                    );
-                                  }).toList(),
-                                  hint: Text(
-                                    "Select a Plan",
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.montserrat(
-                                      color: Colors.white38,
-                                    ),
-                                  ),
-                                  onChanged: (value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        addPlanButtonEnabled = true;
-                                      }else {
-                                        addPlanButtonEnabled = false;
-                                      }
-                                      selectedPreWorkoutPlan = value;
-                                    });
-                                  },
-                                  isExpanded: true,
-                                  iconSize: 32,
-                                  iconEnabledColor: Colors.grey.shade500,
-                                  dropdownColor: Colors.grey.shade800,
-                                  style: GoogleFonts.montserrat(
-                                    color: Colors.white,
-                                  ),
+                      context: context,
+                      builder: (context) {
+                        String? selectedPreWorkoutPlan;
+                        bool addPlanButtonEnabled = false;
+                        return StatefulBuilder(
+                          builder: (context, setState) {
+                            return AlertDialog(
+                              title: Text(
+                                "Add Workout Plan",
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.white,
                                 ),
-                              ],
-                            ),
-                            actions: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                textAlign: TextAlign.center,
+                              ),
+                              backgroundColor: Colors.grey.shade900,
+                              titlePadding: const EdgeInsets.all(24),
+                              contentPadding:
+                                  const EdgeInsets.symmetric(horizontal: 24),
+                              actionsPadding: const EdgeInsets.all(24),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 16, vertical: 8),
-                                      decoration: BoxDecoration(
-                                        color: Colors.red.shade900,
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Text(
-                                        "Cancel",
-                                        style: GoogleFonts.montserrat(
-                                          color: Colors.white,
+                                  DropdownButton(
+                                    value: selectedPreWorkoutPlan,
+                                    items: preWorkoutPlanList.map((key) {
+                                      return DropdownMenuItem(
+                                        value: key.name,
+                                        child: Text(
+                                          key.name,
+                                          style: GoogleFonts.montserrat(),
                                         ),
+                                      );
+                                    }).toList(),
+                                    hint: Text(
+                                      "Select a Plan",
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.montserrat(
+                                        color: Colors.white38,
                                       ),
                                     ),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      workoutPlanList.add(preWorkoutPlanList.firstWhere((element) => element.name == selectedPreWorkoutPlan));
-                                      saveWorkoutPlanList();
-                                      Navigator.of(context).pop();
-                                      update();
+                                    onChanged: (value) {
+                                      setState(() {
+                                        if (value != null) {
+                                          addPlanButtonEnabled = true;
+                                        } else {
+                                          addPlanButtonEnabled = false;
+                                        }
+                                        selectedPreWorkoutPlan = value;
+                                      });
                                     },
-                                    child: Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 16, vertical: 8),
-                                      decoration: BoxDecoration(
-                                        color: addPlanButtonEnabled
-                                            ? Colors.blue.shade900
-                                            : Colors.grey.shade800,
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Text(
-                                        "Add",
-                                        style: GoogleFonts.montserrat(
-                                          color: addPlanButtonEnabled
-                                              ? Colors.white
-                                              : Colors.grey,
-                                        ),
-                                      ),
+                                    isExpanded: true,
+                                    iconSize: 32,
+                                    iconEnabledColor: Colors.grey.shade500,
+                                    dropdownColor: Colors.grey.shade800,
+                                    style: GoogleFonts.montserrat(
+                                      color: Colors.white,
                                     ),
                                   ),
                                 ],
                               ),
-                            ],
-                          );
-                        },
-                      );
-                    });
+                              actions: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 16, vertical: 8),
+                                        decoration: BoxDecoration(
+                                          color: Colors.red.shade900,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Text(
+                                          "Cancel",
+                                          style: GoogleFonts.montserrat(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        workoutPlanList.add(preWorkoutPlanList
+                                            .firstWhere((element) =>
+                                                element.name ==
+                                                selectedPreWorkoutPlan));
+                                        saveWorkoutPlanList();
+                                        Navigator.of(context).pop();
+                                        update();
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 16, vertical: 8),
+                                        decoration: BoxDecoration(
+                                          color: addPlanButtonEnabled
+                                              ? Colors.blue.shade900
+                                              : Colors.grey.shade800,
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Text(
+                                          "Add",
+                                          style: GoogleFonts.montserrat(
+                                            color: addPlanButtonEnabled
+                                                ? Colors.white
+                                                : Colors.grey,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      });
                   break;
               }
             },
@@ -493,13 +504,15 @@ class _HomePageState extends State<HomePage> {
                       child: DropdownButton(
                         value: selectedWorkoutPlanId,
                         items: workoutPlanList
-                            .map((workoutPlan) => DropdownMenuItem(
-                                  value: workoutPlan.uuid,
-                                  child: Text(
-                                    workoutPlan.name,
-                                    style: GoogleFonts.montserrat(),
-                                  ),
-                                ))
+                            .map(
+                              (workoutPlan) => DropdownMenuItem(
+                                value: workoutPlan.uuid,
+                                child: Text(
+                                  workoutPlan.name,
+                                  style: GoogleFonts.montserrat(),
+                                ),
+                              ),
+                            )
                             .toList(),
                         hint: Text(
                           "Select a Workout Plan",

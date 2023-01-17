@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'dart:developer';
 
+import 'package:fit_track/screens/gallery_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -1107,6 +1107,11 @@ class _ProfilePageState extends State<ProfilePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: (() {
           // OPEN GALLERY PAGE
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => GalleryPage()),
+          );
         }),
         backgroundColor: Colors.blue.shade900,
         child: const Icon(Icons.photo),
