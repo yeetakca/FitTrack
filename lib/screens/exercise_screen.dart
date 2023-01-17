@@ -165,8 +165,9 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
                       value: item,
                       onTap: () async {
                         var url =
-                            'https://musclewiki.com/${widget.exercise.getLink()}';
+                            'https://musclewiki.com/${await widget.exercise.getLink()}';
                         final uri = Uri.parse(url);
+                        print(url);
                         var urllaunchable = await canLaunchUrl(uri);
                         if (urllaunchable) {
                           await launchUrl(uri);
